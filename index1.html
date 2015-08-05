@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bootstrap.js"></script>
+    <script src="jquery.js"></script>
+
+    <script type="text/javascript">
+        function substitute() {
+            var myValue = document.getElementById('myTextBox').value;
+                alert('');
+                return;
+
+            if (myValue.length == 0) {
+                alert('Please enter a real value in the text box!');
+                return;
+            }
+            var myTitle = document.getElementById('title');
+            myTitle.innerHTML = myValue;
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="myTextBox" />
+    <input type="submit" value="Search" onclick="substitute()" />
+</body>
+</html>
