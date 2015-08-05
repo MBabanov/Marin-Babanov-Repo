@@ -1,0 +1,55 @@
+.responsive-slider(@element-height) {
+  img {
+    width: 100%;
+    height: @element-height - (@element-height * 0.35);
+    @media (min-width: @screen-sm-min) {
+      height: @element-height - (@element-height * 0.25);
+    }
+    @media (min-width: @screen-md-min) {
+      height: @element-height - (@element-height * 0.15);
+    }
+    @media (min-width: @screen-lg-min) {
+      height: @element-height;
+    }
+  }
+}
+
+.resposive-bg(@element-height) {
+  width: 100%;
+  height: @element-height - (@element-height * 0.35);
+  @media (min-width: @screen-sm-min) {
+    height: @element-height - (@element-height * 0.25);
+  }
+  @media (min-width: @screen-md-min) {
+    height: @element-height - (@element-height * 0.15);
+  }
+  @media (min-width: @screen-lg-min) {
+    height: @element-height;
+  }
+}
+
+.responsive-padding(@padding) {
+  padding: @padding - 5px @padding - 5px @padding - 5px @padding - 5px;
+  @media (min-width: @screen-sm-min) {
+    padding: @padding -5px @padding - 5px @padding - 5px @padding - 5px ;
+  }
+  @media (min-width: @screen-md-min) {
+    padding: @padding;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding: @padding;
+  }
+}
+
+.responsive-text(@font-size) {
+  font-size: @font-size;
+  @media (min-width: @screen-sm-min) {
+    font-size: @font-size;
+  }
+  @media (min-width: @screen-md-min) {
+    font-size: @font-size;
+  }
+  @media (min-width: @screen-lg-min) {
+    font-size: @font-size;
+  }
+}

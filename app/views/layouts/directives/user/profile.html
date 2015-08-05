@@ -1,0 +1,97 @@
+<div class="profile-box">
+    <div class="box-header">
+        <h3>{{user.username}}</h3>
+
+        <div reputation="{{user.reputation}}"></div>
+    </div>
+    <div class="box-content">
+        <div class="row">
+            <div class="col-md-3">
+                <img ng-src='{{user.avatar}}'
+                     class="img-responsive avatar"/>
+            </div>
+            <div class="col-md-3 social-info">
+                <div class="line">
+                    <span class="label">FRIENDS</span><span>{{user.friends.length}}</span>
+                </div>
+                <div class="line">
+                    <span class="label">FOLLOWERS</span><span>{{user.followers.length}}</span>
+                </div>
+                <div class="line">
+                    <span class="label">FOLLOWING</span><span>{{user.following.length}}</span>
+                </div>
+                <div class="line-button" ng-if="itsme">
+                    <button class="btn btn-default btn-social-action btn-block btn-sm" ng-click="edit_profile()">EDIT
+                        PROFILE
+                    </button>
+
+
+                </div>
+                <div class="line-button" ng-if="!itsme && loged">
+                    <button class="btn btn-default btn-social-action btn-block btn-sm" ng-if="!its_friends()">ADD
+                        FRIEND
+                    </button>
+                </div>
+                <div class="line-button" ng-if="!itsme && loged">
+                    <button class="btn btn-default btn-social-action btn-block btn-sm" ng-click="follow_user()"
+                            ng-if="!followed">
+                        FOLLOW
+                    </button>
+                    <button class="btn btn-default btn-social-action btn-block btn-sm" ng-click="unfollow_user()"
+                            ng-if="followed">
+                        UNFOLLOW
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="user-resume col-md-6">
+                <div class="line">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="nacionality">
+                                <strong>Nationality</strong>
+
+                                <div class="flag">
+                                    <span class="el-flag " ng-class="user.nacionality.tld"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div multiplier></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <strong>Member since</strong> {{user.date_joined|date:'MMMM yyyy'}}
+                </div>
+                <div class=" line">
+                    <strong>Hardware</strong> 6-Core Processor, Asus M5A97
+                </div>
+                <div class=" line">
+                    <strong>Achievements</strong>
+                </div>
+                <div class="line-no-border">
+                    <div class="social-sites">
+                        <i class="fa " ng-class="{'fa-facebook-square':provider=='facebook',
+                        'fa-twitter-square':provider=='twitter',
+                        'fa-google-plus-square':provider=='google',
+                        'fa-steam-square':provider=='steam',
+                        'fa-twitch':provider=='twitch'}" ng-repeat="provider in user.social_providers"></i>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3" ng-if="!itsme && loged">
+                            <button class="btn btn-default btn-danger btn-block btn-sm">REPORT</button>
+                        </div>
+                        <div class="col-md-3">
+                            <!--<span class="pull-right">VIEW MORE ></span>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

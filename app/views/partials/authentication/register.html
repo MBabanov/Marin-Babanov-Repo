@@ -1,0 +1,307 @@
+<div class="container">
+<div class="row">
+<div class="col-sm-6 col-md-4 col-md-offset-1">
+<div class="user-login-box" ng-if="!vm.registration_submitted_success">
+<div class="header-box register">
+    <h3 class="registration_effect" ng-show="!registration_submitted">{{'REGISTER_POPUP.TITLE' |
+        translate}}</h3>
+    <a class="pull-right" ng-click="vm.close()">
+        <i class="fa fa-times-circle"></i>
+    </a>
+</div>
+<div class="content-box">
+<form novalidate="novalidate" ng-show="!registration_submitted" name="UserRegisterForm" autocomplete="off"
+      ng-submit="vm.register()">
+<!--<form class="registration_effect" ng-show="!registration_submitted" novalidate="novalidate
+      name="UserRegisterForm"
+      autocomplete="off">"-->
+<div class="form-group"
+     ng-class="{'has-error':UserRegisterForm.username.$error && UserRegisterForm.username.$touched }">
+    <label>{{'REGISTER_POPUP.REGISTRATION_FORM.USERNAME' | translate}}
+    </label>
+    <input type="text" class="form-control" ng-model="vm.user.username" name="username"
+           placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.USERNAME_PLACEHOLDER' | translate}}"
+           required
+           minlength="4" username-validator>
+
+    <div ng-messages="UserRegisterForm.username.$error" ng-if="UserRegisterForm.username.$touched">
+        <div ng-message="required" class="help-block">{{'COMMON.ERROR.REQUIRED_TEXT' | translate}}</div>
+        <div ng-message="minlength" class="help-block">
+            <i class="fa fa-exclamation-circle"></i>
+            {{'REGISTER_POPUP.REGISTRATION_FORM.USERNAME_ERROR_MINLENGHT'
+            | translate}}
+        </div>
+        <div ng-message="username_sintax" class="help-block">
+            <i class="fa fa-exclamation-circle"></i>
+            {{'REGISTER_POPUP.REGISTRATION_FORM.USERNAME_ERROR_SINTAX' |
+            translate}}
+        </div>
+        <div ng-message="usernameAvailability" class="help-block">
+            <i class="fa fa-exclamation-circle"></i>
+            {{'REGISTER_POPUP.REGISTRATION_FORM.USERNAME_ERROR_AVAIBLE' | translate}}
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group"
+             ng-class="{'has-error':UserRegisterForm.password.$error && UserRegisterForm.password.$touched }">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD' | translate}}</label>
+            <input type="password" class="form-control" name="password"
+                   placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_PLACEHOLDER' | translate}}"
+                   minlength="8" required ng-model="vm.user.password">
+
+            <div ng-messages="UserRegisterForm.password.$error"
+                 ng-if="UserRegisterForm.password.$touched">
+                <div ng-message="required" class="help-block">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'COMMON.ERROR.REQUIRED_TEXT' |
+                    translate}}
+                </div>
+                <div ng-message="minlength" class="help-block">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_ERROR_MINLENGHT' |
+                    translate}}
+                </div>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error':UserRegisterForm.repeated_password.$error && UserRegisterForm.repeated_password.$touched }">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_REPEAT' | translate}}</label>
+            <input type="password" class="form-control" name="repeated_password"
+                   ui-validate="{check:'$value==vm.user.password'}"
+                   ui-validate-watch=" 'vm.user.password' "
+                   placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_PLACEHOLDER' | translate}}"
+                   required
+                   ng-model="vm.user.repeated_password">
+
+            <div ng-messages="UserRegisterForm.repeated_password.$error"
+                 ng-if="UserRegisterForm.repeated_password.$touched">
+                <div class="help-block" ng-message="check">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_ERROR_MISMATCH' | translate}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <div password-strength="vm.user.password"></div>
+            <div class="password-streght-labels">
+                <span>{{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_WEAK' | translate}}</span>
+                <span class="pull-right"> {{'REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_STRONG' | translate}}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <br>
+
+            <p translate="REGISTER_POPUP.REGISTRATION_FORM.PASSWORD_HELP_TEXT"></p>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group"
+             ng-class="{'has-error':UserRegisterForm.email.$error && UserRegisterForm.email.$touched }">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL' | translate}}</label>
+            <input type="email" class="form-control" name="email"
+                   placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_PLACEHOLDER' | translate}}"
+                   required
+                   ng-model="vm.user.email" email-validator>
+
+            <div ng-messages="UserRegisterForm.email.$error"
+                 ng-if="UserRegisterForm.email.$touched">
+                <div ng-message="required" class="help-block">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'COMMON.ERROR.REQUIRED_TEXT' |
+                    translate}}
+                </div>
+                <div ng-message="emailAvailability" class="help-block">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_ERROR_NOTAVAIBLE' | translate}}
+                </div>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error':UserRegisterForm.repeated_email.$error && UserRegisterForm.repeated_email.$touched }">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_REPEAT' | translate}}</label>
+            <input type="email" class="form-control" name="repeated_email"
+                   ui-validate="{check:'$value==vm.user.email'}"
+                   ui-validate-watch=" 'vm.user.email' "
+                   placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_PLACEHOLDER' | translate}}"
+                   required
+                   ng-model="vm.user.repeated_email">
+
+            <div ng-messages="UserRegisterForm.repeated_email.$error"
+                 ng-if="UserRegisterForm.repeated_email.$touched && UserRegisterForm.repeated_email.$error">
+                <div class="help-block" ng-message="check">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_ERROR_MISSMATCH'
+                    | translate}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group email-text">
+            <p>{{'REGISTER_POPUP.REGISTRATION_FORM.EMAIL_TEXT' | translate}}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.DOB' | translate}}
+
+            </label>
+            <input type="text" class="form-control" pick-a-date
+                   placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.DOB_PLACEHOLDER' | translate}}"
+                   ng-model="vm.user.birth_date">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group "
+             ng-class="{'has-error':UserRegisterForm.country.$error && UserRegisterForm.country.$touched }">
+            <label>{{'REGISTER_POPUP.REGISTRATION_FORM.NATIONALITY' | translate}}</label>
+            <ui-select ng-model="vm.user.nacionality" theme="bootstrap" name="country" ng-required="true">
+                <ui-select-match
+                        placeholder="{{'REGISTER_POPUP.REGISTRATION_FORM.NATIONALITY_PLACEHOLDER' | translate}}">
+                    {{$select.selected.name}}
+                </ui-select-match>
+                <ui-select-choices
+                        repeat="country in vm.countries | orderBy:'name' | filter: $select.search ">
+                    <span ng-bind-html="country.name | highlight: $select.search"></span>
+
+                </ui-select-choices>
+            </ui-select>
+            <div ng-messages="UserRegisterForm.country.$error"
+                 ng-if="UserRegisterForm.country.$touched">
+                <div class="help-block" ng-message="required">
+                    <i class="fa fa-exclamation-circle"></i>
+                    {{'COMMON.ERROR.REQUIRED_TEXT' | translate}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-md-3">
+        <p>LOLAZO</p>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Usuario Referido</label>
+            <script type="text/ng-template" id="avatar_search.html">
+                <a ui-sref="user.profile({id: match.model.username})">
+                    <img ng-src="{{match.model.avatar}}"
+                         width="16">
+                    <span>{{match.model.username}}</span>
+                </a>
+            </script>
+            <input type="text" ng-model="vm.asyncSelected"
+                   typeahead="user for user in vm.find_users($viewValue)" class="form-control search"
+                   typeahead-template-url="avatar_search.html">
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="row">
+    <div class="col-md-6">
+        <p>
+            {{'REGISTER_POPUP.REGISTRATION_FORM.TERMS_TEXT.TEXT1' | translate}} <a
+                href="/#/terms_and_conditions"
+                target="_blank">{{'REGISTER_POPUP.REGISTRATION_FORM.TERMS_TEXT.LINK'
+            | translate}}</a>
+            {{'REGISTER_POPUP.REGISTRATION_FORM.TERMS_TEXT.TEXT2' | translate}}
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div ng-class="{'has-error':UserRegisterForm.accept.$error && UserRegisterForm.accept.$touched }">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" required name="accept" ng-model="accept">
+                    {{'REGISTER_POPUP.REGISTRATION_FORM.TERMS_TEXT.CHECKBOX_TEXT' | translate}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <button type="submit" ng-disabled="UserRegisterForm.$invalid"
+                class="btn btn-lg btn-danger pull-right">{{'REGISTER_POPUP.REGISTRATION_FORM.BUTTON' |
+            translate}}
+        </button>
+        <!-- <button ng-click="vm.register()" class="btn btn-lg btn-danger pull-right">CREATE
+             ACCOUNT
+         </button>-->
+    </div>
+</div>
+</form>
+<!--  message for registration in case of success-->
+<!--<div class="registration_submitted registration_effect" ng-if="registration_submitted">-->
+<!--<div ng-if="registration_submitted_success"> &lt;!&ndash; in case of success&ndash;&gt;-->
+<!--<p><span-->
+<!--class="text_big">{{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT_BIG' | translate}}</span>-->
+<!--{{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT1' | translate}}-->
+<!--</p>-->
+
+<!--<p> {{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT2' | translate}}-->
+<!--<a href="mailto:community@electronicstars.com?Subject=Confirm%20your%20account"-->
+<!--target="_top">{{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.EMAIL' | translate}}</a>.-->
+<!--</p>-->
+<!--<i class="fa fa-check"></i>-->
+<!--</div>-->
+<!--<div ng-if="!registration_submitted_success"> &lt;!&ndash; in case of error&ndash;&gt;-->
+<!--<p><span class="text_big">{{'REGISTER_POPUP.REGISTRATIION_ERROR.TEXT_BIG' | translate}}</span>-->
+<!--{{'REGISTER_POPUP.REGISTRATIION_ERROR.TEXT' | translate}}-->
+<!--</p>-->
+<!--</div>-->
+
+<!--</div>-->
+
+</div>
+</div>
+<div class="user-login-box" ng-if="vm.registration_submitted_success">
+    <div class="header-box register">
+        <h3 class="registration_effect">
+            {{'REGISTER_POPUP.TITLE_SUCCESS' |
+            translate}}</h3>
+        <a class="pull-right" ng-click="vm.close()">
+            <i class="fa fa-times-circle"></i>
+        </a>
+    </div>
+    <div class="content-box">
+        <div class="registration_submitted registration_effect">
+            <div>
+                <p>
+                    <span
+                            class="text_big">{{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT_BIG' | translate}}</span>
+                    {{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT1' | translate}}
+                </p>
+
+                <p> {{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.TEXT2' | translate}}
+                    <a href="mailto:community@electronicstars.com?Subject=Confirm%20your%20account"
+                       target="_top">{{'REGISTER_POPUP.REGISTRATIION_SUCCESS.TEXT.EMAIL' | translate}}</a>.
+                </p>
+                <i class="fa fa-check"></i>
+            </div>
+            <!--<div ng-if="!registration_submitted_success"> &lt;!&ndash; in case of error&ndash;&gt;-->
+            <!--<p><span class="text_big">{{'REGISTER_POPUP.REGISTRATIION_ERROR.TEXT_BIG' | translate}}</span>-->
+            <!--{{'REGISTER_POPUP.REGISTRATIION_ERROR.TEXT' | translate}}-->
+            <!--</p>-->
+            <!--</div>-->
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+</div>

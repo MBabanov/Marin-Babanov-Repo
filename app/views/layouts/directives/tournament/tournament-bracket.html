@@ -1,0 +1,36 @@
+<div class="ngBracket" id="bracketRoot">
+    <div class="singleElimination">
+        <div class="description">
+            <div ng-repeat="m in rounds" class="round round-{{total_rounds - $index}}" id="round-{{$index+1}}">
+                <div class="roundHeader">
+                    <span class="roundTitle">Round {{ $index+1 }} </span>
+                </div>
+            </div>
+            <div class="round round-final">
+                <div class="roundHeader">
+                    <span class="roundTitle">Winner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="matches" ng-init="max=total_rounds">
+            {{total_rounds}}
+            <div ng-repeat="m in rounds" class="round round-{{total_rounds - $index}}"
+                 id="round-{{$index+1}}" ng-init="round=total_rounds - $index;current=$index+1;">
+                <div class="matchWrapper" ng-repeat="match in m | orderBy:'weight'" id="{{ match.id }}">
+                    <div tournament-bracket-match match="match" round="round" current="current" total="height"
+                         weight="$index+1">
+                    </div>
+                </div>
+            </div>
+            <div class="round round-final">
+                <div class="matchWrapper" ng-init="round=0;current=total_rounds+1">
+                    <div tournament-bracket-winner current="current" team="team_winner" total="height" round="round"
+                         id="winner">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

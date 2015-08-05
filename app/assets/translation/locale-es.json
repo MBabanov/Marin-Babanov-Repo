@@ -1,0 +1,314 @@
+{
+    "LANDING": {
+        "RED_ICONS_BAR": {
+            "ICON1": "ENTRA",
+            "ICON2": "JUEGA",
+            "ICON3": "GANA"
+        },
+        "VIDEO_PROMOTION": {
+            "TEXT1": "Practica eSports y gana dinero.",
+            "TEXT2": "Disfruta de los eSports al instante sin cuotas mensuales",
+            "TEXT3": "Participa en torneos gratis cada día",
+            "TEXT4": "Encuentra o crea nuevos equipos y reta a otros gamers",
+            "TEXT5": "Visualiza las estadísticas de juego más avanzadas",
+            "TEXT6": "¡Conoce a otros gamers como tú!",
+            "BUTTON": "¡CREA TU CUENTA!"
+        },
+        "PLAYER_PERKS": {
+            "TITLE": {
+                "TEXT1": "VE",
+                "TEXT2": "NTAJAS"
+            },
+            "SIGNUP_BUTTON": "¡CREA TU CUENTA!",
+            "BOX_1": {
+                "TITLE": "ESPORTS PARA TODOS, A CUALQUIER HORA",
+                "TEXT": "Sube la temperatura en nuestras emocionantes competiciones. Nuestro sistema garantiza que compitas con jugadores de tu mismo nivel. "
+            },
+            "BOX_2": {
+                "TITLE": "TU PERFIL GAMER ONLINE",
+                "TEXT": "Realiza un seguimiento de tus éxitos y compártelos en tu perfil. Créate una reputación y muestra tus habilidades."
+            },
+            "BOX_3": {
+                "TITLE": "GESTIONA TU EQUIPO ",
+                "TEXT": "Únete a equipos o crea el tuyo propio. ¡Conviértelos en estrellas!"
+            },
+            "BOX_4": {
+                "TITLE": "RETIRA TU DINERO CON SEGURIDAD",
+                "TEXT": "Recibe tus pagos con seguridad gracias a nuestros múltiples métodos de pago"
+            },
+            "BOX_5": {
+                "TITLE": "ENTRENA ESPORTS GRATIS",
+                "TEXT": "Participa en nuestras competiciones gratuitas y mejora tus habilidades mientras haces nuevos amigos."
+            },
+            "BOX_6": {
+                "TITLE": "DISFRUTA DE ESTADÍSTICAS AVANZADAS",
+                "TEXT": "Benefíciate de las estadísticas de juego más avanzadas para desarrollar tu estrategia ganadora."
+            }
+        },
+        "PAYMENT": {
+            "TITLE": "NUESTROS MÉTODOS DE PAGO",
+            "TEXT": "¿Listo para competir con dinero real? Elige cualquiera de las opciones disponibles para tu país y realiza depósitos con facilidad.",
+            "BUTTON": "MÁS"
+        },
+        "GAMING_TOURNAMENT": {
+            "TITLE": {
+                "FIRST_TEXT": "EM",
+                "SECOND_TEXT": "PIEZA A JUGAR",
+                "THIRD_TEXT": " - APÚNTATE A TORNEOS AHORA!"
+            },
+            "TABLE": {
+                "HEADER": {
+                    "TITLE1": "PRÓXIMOS",
+                    "TITLE2": "TORNEOS"
+                },
+                "HEAD": {
+                    "COL1": "FECHA",
+                    "COL2": "TORNEO",
+                    "COL3": "JUGADORES",
+                    "COL4": "PREMIO"
+                }
+            },
+            "SLIDER_DOTS_TEXT": "EN JUEGO!"
+        },
+        "GET_ME_STARTED": {
+            "TITLE": {
+                "TEXT1": "EMPIEZA",
+                "TEXT2": "A COMPETIR"
+            },
+            "ACCOUNT": {
+                "TEXT1": "Crea tu ",
+                "TEXT2": "cuenta.",
+                "BUTTON": "AQUÍ"
+            },
+            "CLIENT": {
+                "TEXT1": "Descarga",
+                "TEXT2": " y ejecuta nuestro cliente."
+            },
+            "STEAM": {
+                "TEXT1": "Usa tu navegador para elegir un ",
+                "TEXT2": " lobby eStars. ",
+                "TEXT3": " Debes ser dueño del juego en ",
+                "TEXT4": "Steam."
+            },
+            "PLAY": {
+                "INSIDE_BOX": {
+                    "TEXT1": "Ya estás jugando ",
+                    "TEXT2": "Counter Strike:GO"
+                },
+                "OUTSIDE_BOX": {
+                    "TEXT1": "Apúntate a una competición.",
+                    "TEXT2": " El juego se lanzará via ",
+                    "TEXT3": "Steam",
+                    "TEXT4": " y se registrará automáticamente."
+                }
+            }
+        },
+        "EMAIL_SIGNUP": {
+            "PLACEHOLDER": "Introduce tu email..",
+            "BUTTON": "¡COMPITE YA!",
+            "ERROR_REQUIRED": "Necesario",
+            "ERROR_INVALID": "Este e-mail no es válida"
+        }
+    },
+    "REGISTER_POPUP": {
+        "TITLE": "CREATE AN ACCOUNT",
+        "TITLE_SUCCESS": "ACCOUNT CREATED",
+        "TITLE_ERROR": "ERROR",
+        "REGISTRATION_FORM": {
+            "USERNAME": "USUARIO",
+            "USERNAME_PLACEHOLDER": "Introduce tu nombre de usuario",
+            "USERNAME_ERROR_MINLENGHT": "El nombre de usuario es demasiado corto",
+            "USERNAME_ERROR_SINTAX": "Usa sólo carácteres y números",
+            "USERNAME_ERROR_AVAIBLE": "Nombre de usuario no disponible",
+            "PASSWORD": "PASSWORD",
+            "PASSWORD_REPEAT": "RE-INTRODUCE EL PASSWORD",
+            "PASSWORD_PLACEHOLDER": "Password",
+            "PASSWORD_STRONG": "Fuerte",
+            "PASSWORD_WEAK": "Débil",
+            "EMAIL_ERROR_NOTVALID": "El correo no es válido",
+            "PASSWORD_ERROR_MISSMATCH": "El password no se corresponde",
+            "PASSWORD_ERROR_MINLENGHT": "Password demasiado corto",
+            "PASSWORD_HELP_TEXT":"El Password debe tener como minimo una longitud de 8 caracteres, y diferencia entre minusculas y mayusculas.",
+            "EMAIL": "CORREO ELECTRÓNICO..",
+            "EMAIL_REPEAT": "RE-INTRODUCE TU CORREO",
+            "EMAIL_PLACEHOLDER": "Correo electrónico..",
+            "EMAIL_TEXT": "Te enviaremos un email de confirmación a este correo. Por favor, sigue el enlace en el email para verificar tu cuenta de Electronic Stars.",
+            "DOB": "FECHA DE NACIMIENTO",
+            "DOB_PLACEHOLDER": "Introduce tu fecha de nacimiento..",
+            "NATIONALITY": "NACIONALIDAD",
+            "NATIONALITY_PLACEHOLDER": "Elije un país de la lista..",
+            "TERMS_TEXT": {
+                "TEXT1": "Por favor, revisa los",
+                "LINK": "términos y condiciones",
+                "TEXT2": "y acéptalos marcando como seleccionada la caja al final de la página. Para continuar debes aceptar los términos y condiciones estipulados por Electronic Stars.",
+                "CHECKBOX_TEXT": "ACEPTO LOS TÉRMINOS Y CONDICIONES"
+            },
+            "BUTTON": "CREAR CUENTA"
+        },
+        "REGISTRATIION_SUCCESS": {
+            "TEXT": {
+                "TEXT_BIG": "Gracias",
+                "TEXT1": "por unirte! Para empezar, comprueba tu correo electrónico y confirma el registro.",
+                "TEXT2": "Si no has recibido un email de comprobación o tienes alguna duda envíanos un correo a",
+                "EMAIL": "customerservice@electronicstars.com"
+            }
+        },
+        "REGISTRATION_ERROR": {
+            "TEXT_BIG": "¡Oh!",
+            "TEXT": "Algo no ha funcionado, por favor comprueba tu conexión e inténtalo otra vez"
+        }
+    },
+    "COMMON": {
+        "ERROR": {
+            "REQUIRED_TEXT": "Obligatorio",
+            "INVALID_EMAIL": "Correo electrónico invalido"
+        },
+        "NAVIGATION": {
+            "ABOUT_US": "QUIENES SOMOS",
+            "TERMS_CONDITIONS": "TÉRMINOS Y CONDICIONES"
+        },
+        "HEADER": {
+            "NAVIGATION": {
+                "HOME": "HOME",
+                "PLAY": {
+                    "LINK": "PLAY",
+                    "LEVEL": "Level",
+                    "GAME_CENTER": "Game Center"
+                },
+                "COMMUNITY": "COMMUNITY"
+            },
+            "LOGIN": {
+                "TOP_UP": "TOP UP NOW!"
+            }
+        }
+    },
+    "ABOUT_US": {
+        "COMPANY_CONTENT": {
+            "TITLE": "Sobre nosotros",
+            "FIRSTP": "Electronic Stars es una web europea para practicar deportes electrónicos en PC con dinero real y un enfoque único.",
+            "SECONDP": "¡Somos mucho más que una liga electrónica! Nuestro objetivo es poner en tus manos las mejores herramientas para alcanzar el éxito en los eSports, ayudándote a convertir tus habilidades y horas de juego en ganancias, al mismo tiempo que haces nuevos amigos gamers como tú. Estamos dedicados en cuerpo y alma al PC como 'la plataforma multijugador por excelencia', es por ello que cuidamos cada detalle para ofrecerte una experiencia única.",
+            "THIRTDP": "En nuestra plataforma puedes ganar dinero participando en competiciones de pago Play-and-go, torneos y retando a otros jugadores. Además, nuestros usuarios pueden divertirse compitiendo gratis, crearse una reputación como gamer y aprovechar sus horas de juego obteniendo Electronic Stars Coins, una moneda intercambiable por bienes y servicios dentro de nuestra plataforma.",
+            "FOURTHP": "Nuestra empresa es la idea de Eduardo Pintor, un gamer empedernido con una única visión, hacer del juego competitivo una realidad para cualquier persona dispuesta a aceptar el reto, independientemente de la edad, género o ubicación física. En el 2010 Eduardo se fijó el objetivo de crear una plataforma para potenciar los juegos multijugador online en su plataforma nativa, el PC, y hacer así posible que cualquier persona con las habilidades necesarias pueda demostrarlo y ganar dinero.",
+            "FIVETHP": "Después de muchos experimentos y llamar a puertas para vender la idea, la compañía se convirtió en una realidad en la soleada Malta en el año 2014. Electronic Stars está formada por un equipo de tecnólogos con una característica en común, un verdadero amor por los videos juegos en PC. Desde nuestro lanzamiento hemos atraído la atención de anunciantes e inversores privados, los cuales nos ayudan a perseguir nuestro sueño, liderar el camino en el mercado de los juegos habilidad online en Europa.",
+            "SIXTHP": "Además de nuestra plataforma también ofrecemos servicios de consultoría para empresas con ganas de participar en esta revolución de los eSports y los juegos de habilidad online."
+        },
+        "PERSON_CONTENT": {
+            "TITLE": "¿Quiénes somos?",
+            "PERSON1": {
+                "NAME": "Eduardo Pintor",
+                "ROLE": "CEO",
+                "DESCRIPTION": "Eduardo es el Director y visionario de la empresa, y por lo tanto no es nada sorprendente que sea una amante de los juegos de estrategia. Dada su larga experiencia como programador, aún sigue ensuciándose las manos con código, aparte de supervisar el desarrollo y funcionamiento de la empresa en general."
+            },
+            "PERSON2": {
+                "NAME": "Jordi Collados",
+                "ROLE": "Business Developer / QA Assurance",
+                "DESCRIPTION": "Jordi es el Director Calidad y Co-Founder, está al cargo de la eficiencia operacional y mejorando la calidad del producto , en otras palabras , testea y rompe todas las nuevas funcionalidades que llegan a sus manos. Es un old school gamer con un gran conocimiento sobre los e-sports y muchos contactos en la escena de los E-Sports conseguidos durante su carrera."
+            },
+            "PERSON3": {
+                "NAME": "Mike López",
+                "ROLE": "Chief Technology Officer",
+                "DESCRIPTION": "Mike es el máximo responsable del desarrollo de la plataforma, es un matemático apasionado con unos conocimientos de programación muy profundos y oscuros. Sin embargo, la habilidad más impresionante que muestra día a día es el uso de la AWP en Counter Strike Source."
+            },
+            "PERSON4": {
+                "NAME": "Miguel Raigón",
+                "ROLE": "Marketing Director",
+                "DESCRIPTION": "Miguel está a cargo de las aburridas tareas de Marketing. A pesar de ello lo hace con sentido del humor y mucha energía. Fuera de esta faceta es un programador y músico electrónico frustrado con un pasado de shooters. A veces revive esos momentos jugando Quake y Duke Nuken."
+            }
+        },
+        "COMPANY_INFO_CONTENT": {
+            "INQUIRIES": {
+                "TITLE": "Inquiries:",
+                "MEDIA": "Media Inquiries:",
+                "SALES": "Sales & Marketing:",
+                "AFFILIATES": "Affiliates:",
+                "ACCOUNTING": "  Accounting:"
+            }
+        }
+    },
+    "SIGNUP_CONFIRMATION": {
+        "CONTENT": {
+            "TITLE": "¡Muchas gracias por registrarte en Electronic Stars!!",
+            "FIRSTP": "Estamos trabajando duro para ofrecerte una plataforma donde jugar eSports, y sacar provecho a tus horas de juego con premios en metálico. En estos momentos estamos realizando las últimas pruebas para que puedas disfrutar de tus deportes electrónicos favoritos de manera segura en nuestra plataforma.",
+            "SECONDP": "¡Queda muy poco para el lanzamiento! Nuestra web estará abierta en breve, con torneos de CS:GO, CSS y rFactor, en modalidades 1v1 y Play-and-GO.",
+            "THIRTDP": "En cuanto abramos, te recompensaremos por tu espera con créditos gratis, así podrás participar en nuestras competiciones, y ganar dinero de verdad.",
+            "FOURTHP": "Muy pronto recibirás un email de nosotros para que formes parte de los primeros usuarios activos de Electronic Stars. Te animamos a que informes a tus amigos de nuestra existencia, ya que si se registran ahora, también recibirán créditos gratis en esta primera fase, y podrán beneficiarse de nuestras promociones de lanzamiento limitadas.",
+            "FIVETHP": "Muchísimas gracias por el interés depositado en nosotros, esperamos verte pronto en nuestros torneos.",
+            "SALUT": "Saludos cordiales,",
+            "SIGN": "El Equipo de Electronic Stars"
+        }
+    },
+    "HOME": {
+        "MAIN": {
+            "TITLE": {
+                "RED": "GANA",
+                "BLACK": "LOS PROXIMOS TO"
+            },
+            "PLAY_NOW": "JUGAR CS GO"
+
+        }
+    },
+    "CASHIER": {
+        "HISTORY": {
+            "TITLE": "TRANSACTION HISTORY",
+            "COL1": "DATE",
+            "COL2": "DESCRIPTION",
+            "COL3": "AMOUNT",
+            "COL4": "DETAILS"
+        },
+        "INDEX": {
+            "TITLE": "MY CASH",
+            "COL1": "REAL CASH",
+            "COL2": "PLAY CREDIT",
+            "COL3": "Balance",
+            "COL4": "Avaible",
+            "COL5": "Total",
+            "BUTTON": {
+                "TOPUP": "TOP UP NOW!",
+                "RECHARGE": "RECHARGE"
+            },
+            "FOOTER": "star points collected to date"
+        },
+        "RECHARGE": {
+            "TITLE": "PLAY CREDITS",
+            "TEXT1": "You have",
+            "TEXT2": "recharges left today.",
+            "TEXT3": " Each recharge entitles you +500 play credits.",
+            "TEXT4": "You can recharge up to 2 times each day",
+            "BUTTON": "RECHARGE",
+            "TEXT5": "CREDIT"
+        }
+    },
+    "EDIT_PROFILE": {
+        "PASSWORD": {
+            "TITLE": "CAMBIAR CONTRASEÑA",
+            "OLD_PASSWORD_LABEL": "Antigua contraseña",
+            "OLD_PASSWORD_PLACEHOLDER": "Antigua contraseña",
+            "NEW_PASSWORD_LABEL": "Nueva contraseña",
+            "NEW_PASSWORD_PLACEHOLDER": "Nueva contraseña",
+            "REPEAT_NEW_PASSWORD_LABEL": "Repetir nueva contraseña",
+            "REPEAT_NEW_PASSWORD_PLACEHOLDER": "Repetir nueva contraseña",
+            "CHANGE_PASSWORD_ACTION": "CAMBIAR CONTRASEÑA"
+
+        }
+    },
+    "PASSWORD_RESET": {
+        "TITLE": "Restablecer contraseña",
+        "EMAIL_LABEL": "Correo electrónico",
+        "EMAIL_PLACEHOLDER": "Correo electrónico",
+        "RESET_ACTION": "Restablecer contraseña",
+        "MESSAGE_TITLE_SUCCESS_UPDATE": "¡Te hemos enviado un correo electrónico!",
+        "MESSAGE_SUCCESS_UPDATE": "Enviaremos un mensaje a tu correo electrónico para que puedas escoger tu nueva contraseña.",
+        "MESSAGE_TITLE_ERROR_UPDATE": "Error!",
+        "MESSAGE_ERROR_UPDATE": "El correo electrónico introducido no es valido."
+    },
+    "PASSWORD_UPDATE": {
+        "TITLE": "Selecciona una nueva contraseña",
+        "NEW_PASSWORD_LABEL": "Nueva contraseña",
+        "NEW_PASSWORD_PLACEHOLDER": "Nueva contraseña",
+        "REPEAT_NEW_PASSWORD_LABEL": "Repetir nueva contraseña",
+        "REPEAT_NEW_PASSWORD_PLACEHOLDER": "Repetir nueva contraseña",
+        "UPDATE_PASSWORD_ACTION": "CAMBIAR CONTRASEÑA",
+        "MESSAGE_TITLE_SUCCESS_UPDATE": "CONTRASEÑA ACTUALIZADA",
+        "MESSAGE_SUCCESS_UPDATE": "Su contraseña ha sido actualizada correctamente."
+    }
+}

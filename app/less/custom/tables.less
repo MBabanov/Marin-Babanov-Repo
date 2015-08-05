@@ -1,0 +1,857 @@
+//
+// Tables
+// --------------------------------------------------
+
+table {
+  max-width: 100%;
+  background-color: @table-bg;
+}
+
+th {
+  text-align: left;
+}
+
+// Baseline styles
+
+.table {
+  width: 100%;
+  margin-bottom: @line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding;
+        line-height: @line-height-base;
+        vertical-align: top;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid @table-border-color;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+
+  // Nesting
+  .table {
+    background-color: @body-bg;
+  }
+}
+
+// Condensed table w/ half padding
+
+.table-tournaments {
+  margin-bottom: 0px;
+  > thead {
+    > tr {
+      > th,
+      > td {
+        background: #232323;
+        color: #FFF;
+
+        text-transform: uppercase;
+        text-align: center;
+
+      }
+      > th {
+        border-bottom: 0px;
+        position: relative;
+        font-weight: 500 !important;
+        border-left: 1px solid #4D4D4D;
+
+        &:after {
+          //          content: "";
+          //          float: right;
+          //          margin-top: 7px;
+          //          visibility: hidden;
+          //          border-left: 4px solid transparent;
+          //          border-right: 4px solid transparent;
+          //          border-top: none;
+          //          border-bottom: 4px solid #FFF;
+        }
+        &.sortable {
+          cursor: pointer;
+          &:hover {
+            background: #2a2a2a;
+          }
+          &:after {
+            content: "";
+            float: right;
+            margin-top: 7px;
+            visibility: hidden;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: none;
+            border-bottom: 4px solid #FFF;
+          }
+          &.asc {
+            background: #2a2a2a;
+            &:after {
+              visibility: visible;
+            }
+          }
+          &.desc {
+            background: #2a2a2a;
+            &:after {
+              border-top: 4px solid #FFF;
+              border-bottom: none;
+              visibility: visible;
+            }
+          }
+        }
+        &:last-child {
+          &:after {
+            position: none;
+            width: 0px;
+          }
+        }
+      }
+    }
+  }
+  > thead {
+    th {
+      &.dark {
+        background-color: #161616;
+      }
+    }
+  }
+
+  > tbody {
+    background: #FFF;
+    //    overflow-y: scroll;
+    min-height: 300px;
+    overflow: auto;
+    height: 300px;
+    //    position: absolute;
+    width: 97%;
+    padding: 5px;
+    position: relative;
+    > tr {
+      > td {
+        padding: 15px 10px;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEE;
+        text-align: center;
+        i {
+          margin-left: 5px;
+        }
+        &.red {
+          color: @electronic-red;
+        }
+      }
+    }
+  }
+  .play {
+    i {
+      color: @electronic-red;
+      font-size: 25px;
+      cursor: pointer;
+      &:hover {
+        color: darken(@electronic-red, 8%);
+      }
+    }
+  }
+  .fa-arrow-up {
+    color: #3EBA31;
+  }
+  .fa-arrow-down {
+    color: @electronic-red;
+  }
+}
+
+.table-match {
+  margin-bottom: 0px;
+  .profile-resum {
+    font-size: 15px;
+    margin-left: 10px;
+    img {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+
+    }
+  }
+  > thead {
+    > tr {
+      > th,
+      > td {
+        background: #232323;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+
+      }
+      > th {
+        border-bottom: 0px;
+        position: relative;
+        font-weight: 500;
+        &:after {
+          content: "";
+          height: 75%;
+          width: 1px;
+          background: #4D4D4D;
+          position: absolute;
+          right: 0px;
+          top: 15%;
+        }
+        &:last-child {
+          &:after {
+            position: none;
+            width: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  > tbody {
+    background: #FFF;
+    font-size: 14px;
+    color: #2A2A2A;
+    width: 97%;
+    padding: 5px;
+    position: relative;
+    > tr {
+      > td {
+        vertical-align: middle;
+        padding: 12px 7px;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEE;
+        text-align: center;
+        &.red {
+          color: @electronic-red;
+        }
+        &.rank, &.lvl, &.score {
+          color: @electronic-red;
+          font-family: @font-family-electronic-stars-title;
+          font-size: 14px;
+        }
+        &.prize {
+          color: #2A2A2A;
+          font-family: @font-family-electronic-stars-title;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .reputation-box {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    font-size: 6px;
+    margin: 0px auto;
+    margin-right: 10px;
+    color: #F7AC3B;
+
+  }
+}
+
+.table_free_for_all {
+  margin-bottom: 0px;
+  .profile-resum {
+    font-size: 15px;
+    margin-left: 10px;
+    img {
+      height: 35px;
+      width: 35px;
+      margin-right: 20px;
+
+    }
+  }
+  > thead {
+    > tr {
+      > th,
+      > td {
+        background: #232323;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+
+      }
+      > th {
+        border-bottom: 0px;
+        position: relative;
+        font-weight: 500;
+        &:after {
+          content: "";
+          height: 75%;
+          width: 1px;
+          background: #4D4D4D;
+          position: absolute;
+          right: 0px;
+          top: 15%;
+        }
+        &:last-child {
+          &:after {
+            position: none;
+            width: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  > tbody {
+    background: #FFF;
+    font-size: 14px;
+    color: #2A2A2A;
+    width: 97%;
+    padding: 5px;
+    position: relative;
+    > tr {
+      > td {
+        vertical-align: middle;
+        padding: 14px 7px;
+        border-right: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEE;
+        text-align: center;
+        &.red {
+          color: @electronic-red;
+        }
+        &.rank, &.lvl, &.score {
+          color: @electronic-red;
+          font-family: @font-family-electronic-stars-title;
+          font-size: 14px;
+        }
+        &.prize {
+          color: #2A2A2A;
+          font-family: @font-family-electronic-stars-title;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .reputation-box {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    font-size: 10px;
+    margin: 0px auto;
+    margin-right: 10px;
+    color: #F7AC3B;
+
+  }
+}
+
+.table-ranking {
+  margin-bottom: 0px;
+  > thead {
+    > tr {
+      > th,
+      > td {
+        background: #161616;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      > th {
+        border-bottom: 0px;
+        position: relative;
+        font-weight: 300;
+        &:after {
+          content: "";
+          height: 75%;
+          width: 1px;
+          background: #4D4D4D;
+          position: absolute;
+          right: 0px;
+          top: 15%;
+        }
+        &:last-child {
+          &:after {
+            display: none;
+            width: 0px;
+          }
+        }
+      }
+    }
+  }
+  > thead {
+    th {
+      &.dark {
+        background-color: #161616;
+      }
+    }
+  }
+
+  .profile-resum {
+    font-size: 12px;
+    margin-left: 10px;
+    @media (min-width: @screen-xs-min) {
+      font-size: 12px;
+    }
+    @media (min-width: @screen-sm-min) {
+      font-size: 15px;
+    }
+    @media (min-width: @screen-md-min) {
+      font-size: 15px;
+    }
+    img {
+      height: 35px;
+      width: 35px;
+      margin-right: 10px;
+      @media (min-width: @screen-xs-min) {
+
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+      }
+      @media (min-width: @screen-sm-min) {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+      }
+      @media (min-width: @screen-md-min) {
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+      }
+    }
+
+  }
+
+  > tbody {
+    background: #FFF;
+    min-height: 430px;
+    overflow: auto;
+    height: 430px;
+    width: 97%;
+    padding: 5px;
+    position: relative;
+    > tr {
+      > td {
+        font-size: 13px;
+        vertical-align: middle;
+        text-align: center;
+        padding: 6px;
+        position: relative;
+        border-bottom: 1px solid #EEEEEE;
+        @media (min-width: @screen-xs-min) {
+          font-size: 13px;
+        }
+        @media (min-width: @screen-sm-min) {
+          font-size: 15px;
+        }
+        @media (min-width: @screen-md-min) {
+          font-size: 15px;
+        }
+        &:first-child {
+          font-size: 13px;
+          @media (min-width: @screen-xs-min) {
+            font-size: 13px;
+          }
+          @media (min-width: @screen-sm-min) {
+            font-size: 19px;
+          }
+          @media (min-width: @screen-md-min) {
+            font-size: 19px;
+          }
+
+        }
+        &:last-child {
+          &:after {
+            position: none;
+            width: 0px;
+          }
+        }
+        &:after {
+          content: "";
+          height: 75%;
+          width: 1px;
+          background: #EEEEEE;
+          position: absolute;
+          right: 0px;
+          top: 15%;
+        }
+        border-top: 0px;
+
+      }
+      &.me {
+        background: #3C3C3C;
+        > td {
+          border-bottom: 1px solid #EEEEEE;
+          color: #FFF;
+          .profile-resum {
+
+            img {
+              border: 2px solid @electronic-red;
+            }
+          }
+          &:after {
+            content: "";
+            height: 75%;
+            width: 1px;
+            background: #4D4D4D;
+            position: absolute;
+            right: 0px;
+            top: 15%;
+          }
+
+        }
+      }
+    }
+  }
+  .reputation-box {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    font-size: 6px;
+    margin: 5px auto;
+    margin-right: 10px;
+    color: #F7AC3B;
+    vertical-align: middle;
+    @media (min-width: @screen-xs-min) {
+      height: 20px;
+      width: 20px;
+      font-size: 6px;
+    }
+    @media (min-width: @screen-sm-min) {
+      height: 30px;
+      width: 30px;
+      font-size: 10px;
+      margin: 10px auto;
+    }
+    @media (min-width: @screen-md-min) {
+      height: 30px;
+      width: 30px;
+      font-size: 10px;
+      margin: 10px auto;
+    }
+
+  }
+}
+
+.table-games {
+  min-height: 460px;
+  thead {
+    tr {
+      th,
+      td {
+        background: #979796;
+        color: #000;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+  thead {
+    th {
+      &.dark {
+        background-color: #161616;
+      }
+    }
+  }
+
+  > tbody {
+    background: #2A2A2A;
+    //    overflow-y: scroll;
+    min-height: 441px;
+    height: 441px;
+    //    position: absolute;..
+    width: 97%;
+    padding: 5px;
+    > tr {
+      > td {
+        padding: 15px;
+        border-right: 1px solid #4D4D4D;
+        border-bottom: 1px solid #4D4D4D;
+      }
+    }
+  }
+}
+
+.table-wallet {
+  width: 100%;
+  margin-bottom: @line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding;
+        line-height: @line-height-base;
+        vertical-align: top;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    font-size: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #505050;
+    &.red {
+      color: @electronic-red;
+    }
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+  > tbody > tr > td {
+    padding: 20px 8px;
+    font-size: 16px;
+    &.blacked {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  // Nesting
+  .table {
+    background-color: @body-bg;
+  }
+}
+
+.table-wallet-history {
+  width: 100%;
+  margin-bottom: 0px;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding;
+        line-height: @line-height-base;
+        vertical-align: top;
+        border-top: 1px solid @table-border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    font-size: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #505050;
+    &.red {
+      color: @electronic-red;
+    }
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+  > tbody > tr > td {
+    padding: 20px 8px;
+    font-size: 16px;
+    &.blacked {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+  // Nesting
+  .table {
+    background-color: @body-bg;
+  }
+}
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: 1px solid @table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid @table-border-color;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  > tbody > tr:nth-child(odd) {
+    > td,
+    > th {
+      background-color: @table-bg-accent;
+    }
+  }
+}
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  > tbody > tr:hover {
+    > td,
+    > th {
+      background-color: @table-bg-hover;
+    }
+  }
+}
+
+// Table cell sizing
+//
+// Reset default table behavior
+
+table col[class*="col-"] {
+  position: static; // Prevent border hiding in Firefox and IE9/10 (see https://github.com/twbs/bootstrap/issues/11623)
+  float: none;
+  display: table-column;
+}
+
+table {
+  td,
+  th {
+    &[class*="col-"] {
+      float: none;
+      display: table-cell;
+    }
+  }
+}
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+.table-row-variant(active; @table-bg-active);
+.table-row-variant(success; @state-success-bg);
+.table-row-variant(danger; @state-danger-bg);
+.table-row-variant(warning; @state-warning-bg);
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+@media (max-width: @screen-xs-max) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: (@line-height-computed * 0.75);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid @table-border-color;
+    -webkit-overflow-scrolling: touch;
+
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    // Special overrides for the bordered tables
+    > .table-bordered {
+      border: 0;
+
+      // Nuke the appropriate borders so that the parent can handle them
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+      // chances are there will be only one `tr` in a `thead` and that would
+      // remove the border altogether.
+      > tbody,
+      > tfoot {
+        > tr:last-child {
+          > th,
+          > td {
+            border-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

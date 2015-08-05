@@ -1,0 +1,70 @@
+.wallet-box {
+  padding: 25px 35px;
+  p {
+    font-size: 16px;
+  }
+  .actions-btns {
+    margin-top: 20px;
+    .btn-block {
+      padding: 15px;
+      font-size: 22px;
+    }
+  }
+}
+
+.wallet-box-fotter {
+  background: #2A2A2A;
+  padding: 15px;
+  .stars-detail {
+    color: @electronic-red;
+    > i {
+      font-size: 16px;
+    }
+    > .value {
+
+    }
+    > .detail {
+      color: #FFF;
+    }
+
+  }
+}
+
+.play-recharges {
+  list-style: none;
+  li {
+    float: left;
+    margin-right: 25%;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-right: 0px;
+      div {
+        &:before {
+          display: none
+        }
+      }
+    }
+    div {
+      background: url("/images/sprites/wallet.png");
+      background-position: 90px 0px;
+      height: 80px;
+      width: 90px;
+      position: relative;
+      &.used {
+        background-position: 0px 0px;
+      }
+      &:before {
+        content: "";
+        width: 200%;
+        height: 3px;
+        position: absolute;
+        #gradient > .horizontal(@start-color: rgba(233,59,69,1);@end-color:rgba(233,59,69,0) );
+        top: 50%;
+        left: 86px;
+        display: block;
+        z-index: 1;
+        -webkit-transition: all .7s ease;
+      }
+    }
+  }
+}

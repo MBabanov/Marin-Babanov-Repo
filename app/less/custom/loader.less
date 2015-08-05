@@ -1,0 +1,117 @@
+@-webkit-keyframes main_loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    //    background: #2ecc71;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes main_loader_after {
+  //  0% {
+  //    border-top: 10px solid @electronic-red;
+  //    border-bottom: 10px solid @electronic-red;
+  //  }
+  //  50% {
+  //    border-top: 10px solid #FFF;
+  //    border-bottom: 10px solid #FFF;
+  //  }
+  //  100% {
+  //    border-top: 10px solid @electronic-red;
+  //    border-bottom: 10px solid @electronic-red;
+  //  }
+}
+
+@keyframes main_loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    //    background: #2ecc71;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes main_loader_after {
+  0% {
+    border-top: 10px solid @electronic-red;
+    border-bottom: 10px solid @electronic-red;
+  }
+  50% {
+    border-top: 10px solid #FFF;
+    border-bottom: 10px solid #FFF;
+  }
+  100% {
+    border-top: 10px solid @electronic-red;
+    border-bottom: 10px solid @electronic-red;
+  }
+}
+
+.electronic-loader {
+  display: none;
+
+  .back-drop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #222;
+    opacity: 0.6 !important;
+    z-index: 2000;
+  }
+  .wrapper-el-loader {
+    z-index: 2000;
+    width: 230px;
+    height: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 60px;
+    right: 0;
+    margin: auto auto;
+    -webkit-user-select: none;
+    .main_img_loader {
+      position: absolute;
+      width: 90px;
+      height: 100px;
+      background: url('/images/logos/logo_loader.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      top: 40px;
+      left: 35px;
+    }
+    .main_loader {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      .animation(main_loader 1.5s linear infinite);
+
+      &:after {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        border-top: 10px solid @electronic-red;
+        border-left: 10px solid @electronic-red;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid transparent;
+        .box-shadow(0 0 35px @electronic-red);
+        border-radius: 198px;
+        content: '';
+
+        .animation(main_loader_after 2.5s linear infinite);
+
+      }
+    }
+  }
+
+}
+
+

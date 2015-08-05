@@ -1,0 +1,23 @@
+@xxs: ~'max-width: 377px';
+@xs: ~'max-width: @{screen-xs-max}';
+@sm: ~'max-width: @{screen-sm-max}';
+@md: ~'max-width: @{screen-md-max}';
+.bs3-responsive-type(@mq, @font-size-base, @mq-size-percentage) {
+  @media (@mq) {
+
+    @font-size-large: ceil((@font-size-base * 1.25)  * @mq-size-percentage);
+    @font-size-small: ceil((@font-size-base * 0.85)  * @mq-size-percentage);
+    @font-size-h1: floor((@font-size-base * 2.6)  * @mq-size-percentage);
+    @font-size-h2: floor((@font-size-base * 2.15) * @mq-size-percentage);
+    @font-size-h3: ceil((@font-size-base * 1.7)   * @mq-size-percentage);
+    @font-size-h4: ceil((@font-size-base * 1.25)  * @mq-size-percentage);
+    @font-size-h5: @font-size-base;
+    @font-size-h6: ceil((@font-size-base * 0.85)  * @mq-size-percentage);
+    @import (multiple) "../scaffolding.less";
+    @import (multiple) "../type.less";
+  }
+}
+
+.bs3-responsive-type(@sm, 16px, 0.9);
+.bs3-responsive-type(@xs, 15px, 0.85);
+.bs3-responsive-type(@xxs, 14px, 0.8);

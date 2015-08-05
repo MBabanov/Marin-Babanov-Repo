@@ -1,0 +1,68 @@
+<div class="edit-profile-box" ng-controller="cashform.user.index as _cashform">
+    <div class="box-header">
+        <h3>{{'CASHFORM.PAYMENT.TITLE' | translate}}</h3>
+        <a class="pull-right" ng-click="close()">
+            <i class="fa fa-times-circle"></i>
+        </a>
+    </div>
+    <div class="box-content">
+        <div class="wallet-box">
+            <div class="row">
+				<div class="col-md-6 cash-box-left">
+					<form method="post" id="visa-payment">
+						<fieldset>
+							<label for="">Choose card</label>
+							<select>
+								<option>New card</option>
+								<option>Existing card</option>
+							</select>
+							
+							<label for="">Card number</label>
+							<input type="text" id="cardNumber" name="cardNumber" value="" pattern="[\d\ ]{12,}" placeholder="xxxxxxxxxxxx" required />
+							
+							Expires
+							<label for="expMonth"></label>
+							<select>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+							
+							<label for="expYear"></label>
+							<select>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+							</select>
+							
+							<label for="cardCode">CVC</label>
+							<input type="text" id="cardCode" name="" value="" size="3" required />
+							
+							<label for="storeCard"></label>
+							<input type="checkbox" id="storeCard" name="" value="" /> Store card details
+							
+						</fieldset>
+						<div>
+							<div>Deposit  with Visa </div>
+							<img ng-src="{{cashform.visaimg}}" alt="Visa" title="Visa" />
+						</div>
+						<button>Deposit</button>
+					</form>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

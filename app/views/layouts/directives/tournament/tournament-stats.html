@@ -1,0 +1,68 @@
+<div class="tournament-detail-stats" ng-if="stats">
+    <div class="box-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="line">
+                    <div class=" esi-30 esi-total-kill"></div>
+                    <div>
+                        <span class="title">Kills</span>
+                        <span class="value">{{stats.kills}}</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class=" esi-30 esi-total-hs"></div>
+                    <div>
+                        <span class="title">headshots</span>
+                        <span class="value">{{stats.headshots}}</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class=" esi-30 esi-total-deaths"></div>
+                    <div>
+                        <span class="title">deaths</span>
+                        <span class="value">{{stats.deaths}}</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class=" esi-30 esi-average-kill-rate-respawn"></div>
+                    <div>
+                        <span class="title">K/D </span>
+                        <span class="value">{{stats.kill_dead_ratio | number:2}}</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class=" esi-30 esi-accuracy-attack"></div>
+                    <div>
+                        <span class="title">Acurracy</span>
+                        <span class="value">{{stats.acuracy|number:2}}%</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="user-position">
+
+
+                    <h3 ng-if="stats.position.win">{{'LOBBY.LABEL.YOU_WON'|translate}}</h3>
+                    <h4 ng-if="stats.position.win">{{stats.position.prize.amount}}
+                        <i ng-class="{'fel fel-fel_money_electornic':stats.position.prize.type=='FAKE_CASH','fel fel-fel_money_euro':stats.position.prize.type=='REAL_CASH'}"></i>
+
+
+                    </h4>
+
+                    <h3 ng-if="!stats.position.win" class="lost">{{'LOBBY.LABEL.YOU_LOST'|translate}}</h3>
+                </div>
+                <div class="position-wrapper">
+                    <div class="position">
+                        {{'LOBBY.LABEL.YOU_RANKED'|translate}}< {{stats.position.ranked |cardinal}}
+                    </div>
+                    <div class="soldier-sprite">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<section class="tab-pane" ng-show="selected">
+    <div class="invite-content" scroll-bar>
+        <div class="tab-scrollable-max-size">
+            <div class="span1 list-friends" data-ng-repeat="user in unselectedUsers">
+                <a data-ng-click="selectUser(user)">
+                    <div class="item-container">
+                        <img class="img-responsive" data-ng-src="{{user.avatar}}">
+                        <span class="item-name">{{user.username}}</span>
+                        <span class="item-location">{{user.provider}}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

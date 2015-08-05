@@ -1,0 +1,225 @@
+<div class="container">
+<div class="btn-close-wrapper">
+    <button class="btn btn-close" ng-click="_lobby.close()">x</button>
+</div>
+<div class="row">
+<div class="col-md-2 col-sm-2 bounceInDown animated">
+    <div tournament-detail tournament="_lobby.tournament"></div>
+    <div class="tournament-social-box" ng-if="last_tournament_event">
+        <div class="drag-box">
+            <div><span>PL</span>AY <br>
+                <span>BO</span>X
+            </div>
+        </div>
+        <div class="share-box">
+            <div class="share-data">
+                <p>
+                    <a href="#">{{last_tournament_event.user}}</a> just {{last_tournament_event.action}}
+                    {{last_tournament_event.quantity}} points in <span>#css</span> on
+                    <span>#electronicStars</span>
+                </p>
+
+            </div>
+            <div class="share-by">
+                <span>SHARE ON : </span>
+
+                <div class="social-sites">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter-square"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-6 " ng-if="_lobby.tournament.status == 'FINISHED'">
+    <div class="tournament-close-header">
+        <h3>
+            {{_lobby.tournament.name}}
+            <span>({{_lobby.tournament.registered_players}}/{{_lobby.tournament.config.type.num_players * _lobby.tournament.config.type.num_teams}})</span>
+        </h3>
+        <a class="pull-right" ng-click="_lobby.close()">
+            <i class="fa fa-times-circle"></i>
+        </a>
+    </div>
+    <div class="tournament-detail-box" back-img="{{_lobby.tournament.maps[0].cover}}">
+        <div class="tournament-detail-header">
+            <div tournament-header current="_lobby.tournament" registered="_lobby.registered_tournament"
+                 register="_lobby.register()" match="_lobby.match"
+                 unregister="_lobby.unregister()" launched="_lobby.launched" launch="_lobby.launch()"></div>
+        </div>
+        <div tournament-match-round-detail match="_lobby.match.id" ng-show="_lobby.on_lobby"></div>
+        <div class="row tournament-detail-content" ng-hide="_lobby.loading">
+            <div ng-hide="_lobby.on_lobby" style="position:relative;height: 100%">
+                <div class="tournmanet-description">
+                    <img src="images/logos/shotter_logo.png"/>
+
+                    <div class="type">
+                        <!--Neque porro quisquam est qui dolorem ipsum-->
+                    </div>
+                    <div class="description-type">
+                        <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+                    </div>
+                </div>
+                <div tournament-prizes tournament="_lobby.tournament"></div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tournament-detail-box-title">
+        <div class="box-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>{{_lobby.title}}</h3>
+                </div>
+
+                <div class="col-md-2 pull-right" ng-show="_lobby.on_lobby">
+                    <div class="lobby_back_button" ng-click="_lobby.go_brackets()">
+                        GO TO BRACKETS
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="tournament-brackets-box" ng-if="_lobby.matches.length > 0" ng-show="_lobby.on_brackets">
+        <div class="row">
+            <div class="col-md-6">
+                <div tournament-el-bracket rounds="_lobby.rounds" teams="_lobby.tournament.teams"
+                     matches="_lobby.matches" winner="_lobby.winner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="tournament-team-detail-wrapper" ng-show="_lobby.on_lobby">
+        <div tournament-match match="_lobby.match"></div>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-4 col-xs-6 bounceInDown animated" ng-if="_lobby.tournament.status != 'FINISHED'">
+    <div class="tournament-close-header">
+        <h3>
+            {{_lobby.tournament.name}}
+            <span>({{_lobby.tournament.registered_players}}/{{_lobby.tournament.config.type.num_players * _lobby.tournament.config.type.num_teams}})</span>
+        </h3>
+        <a class="pull-right" ng-click="_lobby.close()">
+            <i class="fa fa-times-circle"></i>
+        </a>
+    </div>
+    <div class="tournament-detail-box" back-img="{{_lobby.tournament.maps[0].cover}}">
+        <div class="tournament-detail-header">
+            <div tournament-header current="_lobby.tournament" registered="_lobby.registered_tournament"
+                 register="_lobby.register()" match="_lobby.next_match"
+                 unregister="_lobby.unregister()" launched="_lobby.launched" launch="_lobby.launch()"></div>
+        </div>
+        <div tournament-stats stats="_lobby.stats"></div>
+        <div tournament-match-round-detail match="_lobby.match.id" ng-show="_lobby.show_match_detail"></div>
+
+        <div class="row tournament-detail-content" ng-hide="_lobby.loading">
+            <div ng-hide="_lobby.on_lobby" style="position:relative;height: 100%">
+                <div class="tournmanet-description">
+                    <img src="images/logos/shotter_logo.png"/>
+
+                    <div class="type">
+                        <!--Neque porro quisquam est qui dolorem ipsum-->
+                    </div>
+                    <div class="description-type">
+                        <!--Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+                    </div>
+                </div>
+                <div tournament-prizes tournament="_lobby.tournament"></div>
+            </div>
+        </div>
+        <div tournament-loader init="_lobby.loading" countdown="_lobby.countdown"
+             callback="_lobby.launch()" match="_lobby.match" seconds="timeElapsed"></div>
+    </div>
+    <div ng-hide="_lobby.loading">
+        <div class="tournament-detail-box-title">
+            <div class="box-content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>{{_lobby.title}}</h3>
+                    </div>
+                    <div ng-if="_lobby.tournament.status !='REGISTRATION'">
+                        <div class="col-md-2 pull-right" ng-show="_lobby.on_lobby">
+                            <div class="lobby_back_button" ng-click="_lobby.go_brackets()">
+                                GO TO BRACKETS
+                                <i class="fa fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="tournament-teams-box" ng-if="_lobby.matches.length == 0">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="registered_teams">
+                        <ul class="teams">
+                            <li class="col-md-3" ng-repeat="t in _lobby.tournament.teams">
+                                <div class="bracket-team" ng-if="t.players.length ==0">
+                                    <div class="bracket-team-content">
+                                        <img class=" circle"
+                                             src="/images/bgs/teams.png" alt="user">
+                                        <h4>Team {{t.name}}</h4>
+                                        <h5>waiting for players</h5>
+                                    </div>
+                                    <div class="bracket-team-footer">
+                                        <div class="status">
+                                            PENDING
+                                        </div>
+                                        <div class="members">
+                                            MEMBERS PENDING
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bracket-team registered" ng-if="t.players.length ==1">
+                                    <div class="bracket-team-content" ng-init="p=t.players[0]">
+                                        <img class=" circle"
+                                             ng-src="{{p.user.avatar}}" profile-tooltip user="p.user" me="me"
+                                             alt="user">
+                                        <h4>Team {{t.name}}</h4>
+                                        <h5>{{p.user.username}}</h5>
+                                    </div>
+                                    <div class="bracket-team-footer registered">
+                                        <div class="status">
+                                            LVL {{p.lvl}}
+                                        </div>
+                                        <div class="members">
+                                            PENDING DRAW
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tournament-brackets-box" ng-if="_lobby.matches.length > 0" ng-show="_lobby.on_brackets">
+            <div class="row">
+                <div class="col-md-6">
+                    <div tournament-el-bracket rounds="_lobby.rounds" teams="_lobby.tournament.teams"
+                         matches="_lobby.matches" winner="_lobby.tournament.winner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tournament-team-detail-wrapper" ng-show="_lobby.on_lobby">
+            <div tournament-match match="_lobby.match"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+

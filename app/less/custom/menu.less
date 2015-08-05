@@ -1,0 +1,848 @@
+.actions-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  > li.active {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      border-top: 1px solid #EEEEEE;
+      &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: "";
+        display: block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #2A2A2A;
+        left: 20px;
+        bottom: -10px;
+      }
+      &:hover {
+        background: #2A2A2A;
+      }
+
+      > i {
+        margin-left: 4px
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        content: "\f068";
+        font-weight: 300;
+        text-shadow: none;
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      .games-boxes {
+        background: #505050;
+        padding: 20px 10px;
+        > li {
+          display: inline-block;
+          margin-right: 5px;
+          a {
+            color: #FFF;
+            img {
+              width: 87px;
+              height: 87px;
+            }
+          }
+        }
+      }
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 55px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #FFF;
+          font-weight: 300;
+          background: #505050;
+          border-left: 5px solid #505050;
+          .game-box {
+            color: red;
+            img {
+              width: 50px;
+            }
+
+          }
+          &:hover {
+            background: #2A2A2A;
+            color: #DF3B45;
+            border-left: 5px solid #DF3B45;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  > li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      border-top: 1px solid #EEEEEE;
+      cursor: pointer;
+      &:hover {
+        background: #3C3C3C;
+      }
+      > i {
+        margin-left: 4px
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        font-weight: 300;
+        text-shadow: none;
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: none;
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 55px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #FFF;
+          font-weight: 300;
+          background: #505050;
+          border-left: 5px solid #505050;
+          &:hover {
+            background: #2A2A2A;
+            color: #DF3B45;
+            border-left: 5px solid #DF3B45;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.detail-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+  > li.active {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      border-bottom: 1px solid #333333;
+      &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: "";
+        display: block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #2A2A2A;
+        left: 20px;
+        bottom: -10px;
+      }
+      &:hover {
+        background: #2A2A2A;
+      }
+
+      > i {
+        margin-left: 4px;
+        font-size: 19px;
+        color: #DF3B45;
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        content: "\f068";
+        font-weight: 300;
+        text-shadow: none;
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      > p {
+        padding: 10px 15px 10px 15px;
+        color: #FFF;
+        background: #0A0A0A;
+        max-height: 400px;
+      }
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 55px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #FFF;
+          font-weight: 300;
+          background: #0A0A0A;
+
+          .map {
+            margin-left: -55px;
+            margin-right: -10px;
+            margin-top: 5px;
+          }
+          //          border-left: 5px solid #505050;
+          //          &:hover {
+          //            background: #2A2A2A;
+          //            color: #DF3B45;
+          //            border-left: 5px solid #DF3B45;
+          //            cursor: pointer;
+          //          }
+        }
+      }
+    }
+  }
+  > li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      border-bottom: 1px solid #333333;
+      //      border-top: 1px solid #EEEEEE;
+      cursor: pointer;
+      &:hover {
+        background: #3C3C3C;
+      }
+      > i {
+
+        margin-left: 4px;
+        font-size: 19px;
+        color: #DF3B45;
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .prize {
+        float: right;
+        color: @electronic-red;
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        font-weight: 300;
+        text-shadow: none;
+      }
+      &.prize {
+        > i {
+          color: #FFF;
+        }
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: none;
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        .title {
+          color: @electronic-red;
+          font-family: @font-family-electronic-stars-title;
+          text-transform: uppercase;
+        }
+
+      }
+    }
+  }
+
+}
+
+.tournament-detail-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+  > li.active {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #FFF;
+      border-bottom: 1px solid #333333;
+      @media (min-width: @screen-xs-min) {
+        padding: 15px;
+        font-size: 14px;
+
+      }
+      @media (min-width: @screen-sm-min) {
+        padding: 15px;
+        font-size: 14px;
+      }
+      @media (min-width: @screen-md-min) {
+        padding: 20px;
+        font-size: 16px;
+      }
+      &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: "";
+        display: block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #2A2A2A;
+        left: 20px;
+        bottom: -10px;
+      }
+      &:hover {
+        background: #2A2A2A;
+      }
+
+      > i {
+        margin-left: 4px;
+        font-size: 16px;
+        color: #DF3B45;
+        @media (min-width: @screen-md-min) {
+          font-size: 19px;
+        }
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 14px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        content: "\f068";
+        font-weight: 300;
+        text-shadow: none;
+        @media (min-width: @screen-md-min) {
+          font-size: 16px;
+        }
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      > p {
+        padding: 10px 15px 10px 15px;
+        color: #FFF;
+        background: #0A0A0A;
+        max-height: 400px;
+      }
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 15px;
+          text-decoration: none;
+          font-size: 13px;
+          color: #FFF;
+          font-weight: 300;
+          background: #0A0A0A;
+          @media (min-width: @screen-md-min) {
+            padding: 10px 15px 10px 25px;
+            font-size: 15px;
+          }
+          .map {
+            margin-left: -25px;
+            margin-right: -10px;
+            margin-top: 5px;
+          }
+
+        }
+      }
+    }
+  }
+  > li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #FFF;
+      border-bottom: 1px solid #333333;
+      cursor: pointer;
+      @media (min-width: @screen-xs-min) {
+        padding: 15px;
+        font-size: 14px;
+
+      }
+      @media (min-width: @screen-sm-min) {
+        padding: 15px;
+        font-size: 14px;
+      }
+      @media (min-width: @screen-md-min) {
+        padding: 20px;
+        font-size: 16px;
+      }
+      &:hover {
+        background: #3C3C3C;
+      }
+      > i {
+        margin-left: 4px;
+        font-size: 16px;
+        color: #DF3B45;
+        @media (min-width: @screen-md-min) {
+          font-size: 19px;
+        }
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .prize {
+        float: right;
+        color: @electronic-red;
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 14px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        font-weight: 300;
+        text-shadow: none;
+        @media (min-width: @screen-md-min) {
+          font-size: 16px;
+        }
+
+      }
+      &.prize {
+        > i {
+          color: #FFF;
+        }
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: none;
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        .title {
+          color: @electronic-red;
+          font-family: @font-family-electronic-stars-title;
+          text-transform: uppercase;
+          line-height: 12px;
+        }
+
+      }
+    }
+  }
+
+}
+
+.player-stats-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    a {
+      display: block;
+
+      margin: 0px;
+      border: 0px;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      &:active, &:hover {
+        color: #DF3B45;
+      }
+    }
+    &.active {
+      a {
+        color: #DF3B45;
+      }
+    }
+  }
+}
+
+.edit-profile-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  > li.active {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+
+      &:after {
+        width: 0;
+        height: 0;
+        position: absolute;
+        content: "";
+        display: block;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #2A2A2A;
+        left: 20px;
+        bottom: -10px;
+      }
+      &:hover {
+        background: #2A2A2A;
+      }
+      > i {
+        margin-left: 4px
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        content: "\f068";
+        font-weight: 300;
+        text-shadow: none;
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: block;
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 55px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #FFF;
+          font-weight: 300;
+          background: #505050;
+          border-left: 5px solid #505050;
+          &:hover {
+            background: #0A0A0A;
+            color: #DF3B45;
+            border-left: 5px solid #DF3B45;
+            cursor: pointer;
+          }
+          &.active {
+            background: #0A0A0A;
+            color: #DF3B45;
+            border-left: 5px solid #DF3B45;
+          }
+        }
+      }
+    }
+  }
+  > li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    > a {
+      display: block;
+      position: relative;
+      margin: 0px;
+      border: 0px;
+      padding: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #FFF;
+      //      border-top: 1px solid #EEEEEE;
+      cursor: pointer;
+      &:hover {
+        background: #3C3C3C;
+      }
+      > i {
+        margin-left: 4px
+      }
+      > .title {
+        margin-left: 10px
+      }
+      > .arrow:before {
+        float: right;
+        width: 10px;
+        text-align: center;
+        margin-top: -1px;
+        margin-right: 5px;
+        margin-left: 5px;
+        display: inline;
+        font-size: 16px;
+        font-family: FontAwesome;
+        height: auto;
+        content: "\f067";
+        font-weight: 300;
+        text-shadow: none;
+      }
+    }
+    > .actions-sub-menu {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: none;
+      > li {
+        background: none;
+        margin: 0px;
+        padding: 0px;
+
+        > a {
+          display: block;
+          margin: 0;
+          padding: 10px 15px 10px 55px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #FFF;
+          font-weight: 300;
+          background: #505050;
+          border-left: 5px solid #505050;
+          &:hover {
+            background: #2A2A2A;
+            color: #DF3B45;
+            border-left: 5px solid #DF3B45;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.footer-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  > li {
+    border: 0px;
+    display: inline-block;
+    vertical-align: bottom;
+    &:not(:first-child) {
+      padding: 0px 5px
+    }
+    a {
+      color: #FFF;
+      img {
+        width: 35px;
+        padding-bottom: 3px;
+      }
+    }
+  }
+}
+
+.footer-social-menu {
+  list-style: none;
+  margin: 0px;
+  padding: 10px 0px;
+  font-size: 15px;
+  > li {
+    border: 0px;
+    display: inline-block;
+    vertical-align: bottom;
+    &:not(:first-child) {
+      padding: 0px 5px
+    }
+    &:last-child {
+      i {
+        font-size: 1.7em !important;
+      }
+    }
+    a {
+      color: #FFF;
+      &:hover {
+        color: #ACACAC;
+        //        font-size: 16px;
+      }
+    }
+  }
+}
+
+.games-played {
+  list-style: none;
+  margin: 0px;
+  padding: 0;
+  > li {
+    display: inline-block;
+    img {
+      height: 55px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="profile-menu-box">
+                <div class="options">
+                    <ul class="edit-profile-menu">
+                        <li ng-class="{'active':menuItem=='edit'}">
+                            <a ng-click="toggleMenu('edit')">
+                                <span class="title">
+                            EDIT PROFILE
+                                 </span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="actions-sub-menu">
+                                <li>
+                                    <a ng-class="{'active':page=='profile.edit'}" ng-click="go_to('profile.edit')">
+                                        Personal Detail
+                                    </a>
+                                </li>
+                                <li>
+                                    <a ng-class="{'active':page=='profile.password'}"
+                                       ng-click="go_to('profile.password')">
+                                        Change Password
+                                    </a>
+                                </li>
+                                <!--<li>-->
+                                <!--<a>-->
+                                <!--Privacy Settings-->
+                                <!--</a>-->
+                                <!--</li>-->
+                            </ul>
+                        </li>
+                        <li ng-class="{'active':menuItem=='cashier'}">
+                            <a ng-click="toggleMenu('cashier')">
+                                <span class="title">
+                            WALLET
+                                 </span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="actions-sub-menu">
+                                <li>
+                                    <a ng-class="{'active':page=='profile.cashier'}"
+                                       ng-click="go_to('profile.cashier')">
+                                        My Cash
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a ng-class="{'active':page=='profile.cashier.historic'}"
+                                       ng-click="go_to('profile.cashier.historic')">
+                                        Transaction History
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div ng-switch="page">
+                <div ng-switch-when="profile.edit">
+                    <div ng-include="'/views/partials/user/edit/personal.html'"></div>
+                </div>
+                <div ng-switch-when="profile.password">
+                    <div ng-include="'/views/partials/user/edit/password.html'"></div>
+                </div>
+                <div ng-switch-when="profile.cashier">
+                    <div ng-include="'/views/partials/cashier/index.html'"></div>
+                </div>
+                <div ng-switch-when="profile.cashier.play_credits">
+                    <div ng-include="'/views/partials/cashier/play-recharge.html'"></div>
+                </div>
+                <div ng-switch-when="profile.cashier.historic">
+                    <div ng-include="'/views/partials/cashier/historic.html'"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

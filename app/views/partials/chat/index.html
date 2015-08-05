@@ -1,0 +1,71 @@
+<section ng-controller="chat as _chat">
+
+
+    <div class="chat-box" ng-class="{'opened':_chat.is_open}">
+        <div class="chat-header">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="opener" ng-click="_chat.toggle_chat()" ng-class="{'opened':_chat.is_open}">
+                        <i class=" fa fa-comment-o"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="divider">-->
+
+        <!--</div>-->
+        <div class="chat-message-box">
+            <div class="chat-message-header">
+
+                <h4>{{_chat.game_channel.name}}</h4>
+            </div>
+            <div class="chat-message-content" scroll-bar element="chat">
+                <ul>
+                    <li class="clearfix" ng-repeat="message in _chat.messages|orderBy :'created_time'"
+                        ng-class="{'left':message.from_user.id==_chat.current_id,'right':message.from_user.id!=_chat.current_id}">
+                        <div class="user-img "
+                             ng-class="{'pull-left':message.from_user.id==_chat.current_id,'pull-right':message.from_user.id!=_chat.current_id}">
+                            <img ng-src="{{message.from_user.avatar}}"
+                                 alt="User Avatar"/></div>
+                        <div class="chat-body clearfix">
+                            <p ng-bind-html="message.message | emoticons:{link:true,linkTarget:'_blank'}"></p>
+
+                            <div class="header">
+                                <span class="name">{{message.from_user.username}} <i class="fa fa-clock-o"></i> {{message.created_time|timeAgo | date:'HH:mm'}}</span>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="right clearfix">-->
+                    <!--<span class="user-img pull-right">-->
+                    <!--<img src="https://electronics3.s3.amazonaws.com/avatars/406000482616011220143537.png"-->
+                    <!--alt="User Avatar">-->
+                    <!--</span>-->
+
+                    <!--<div class="chat-body clearfix">-->
+                    <!--<div class="header">-->
+                    <!--<span class="name">Anton Durant</span>-->
+                    <!--</div>-->
+                    <!--<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare-->
+                    <!--dolor, quis ullamcorper ligula sodales. </p>-->
+                    <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="chat-message-writter">
+                <div class="wrapper-writter">
+                    <textarea ng-model="_chat.message" msd-elastic ui-keypress="{13:'_chat.add_message($event)'}"
+                              placeholder="Write Your Message Here" rows="1"
+                              class="form-control">
+                    </textarea>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,158 @@
+<div class="col-md-3 player" ng-click="flip()">
+    <player-front>
+        <div class="electronic-post-match-card">
+            <img class="cover" ng-src="{{_player.cover}}" alt="{{_player.username}}">
+
+            <div class="player-info">
+                <div class="row">
+                    <div class="col-md-3 col-xs-3 col-sm-3">
+                        <img class="img-responsive avatar" ng-src="{{_player.avatar}}"
+                             alt="{{_player.username}}">
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-sm-3 description">
+                        <div class="description-name">
+                            <div class="name">{{_player.username}}</div>
+                            <div reputation="{{_player.reputation}}"></div>
+                        </div>
+                        <div class="description-game">
+                            <div class="name">
+                                {{lvl.game.name}}
+                            </div>
+                            <div class="lvl">
+                                {{lvl.lvl}}
+                            </div>
+                        </div>
+                        <div class="description-progress" tooltip="{{lvl.percent}}%">
+                            <progressbar animate="false" value="lvl.percent" type="danger"></progressbar>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-graph">
+                <div class="graph"></div>
+            </div>
+        </div>
+    </player-front>
+    <player-back>
+        <div class="electronic-post-match-card">
+            <div class="player-stats">
+                <div class="row">
+                    <div class="col-md-3 col-xs-3 col-sm-3">
+                        <div class="stats">
+                            <div class="line">
+                                <div class=" esi-30 esi-total-kill"></div>
+                                <div>
+                                    <span class="title">KILLS</span>
+                                    <span class="value">{{stats.kills}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-total-kill-hs"></div>
+                                <div>
+                                    <span class="title">HEADSHOTS</span>
+                                    <span class="value">{{stats.headshots}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-shot-fired"></div>
+                                <div>
+                                    <span class="title">SHOTS FIRED</span>
+                                    <span class="value">{{stats.shots_fired}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-damage"></div>
+
+                                <div>
+                                    <span class="title">DMG DONE</span>
+                                    <span class="value">{{stats.damage_done }}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-total-deaths"></div>
+
+                                <div>
+                                    <span class="title">DEADS</span>
+                                    <span class="value">{{stats.deaths}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-total-bombs"></div>
+                                <div>
+                                    <span class="title">PLANTED C4</span>
+                                    <span class="value">{{stats.defused_bombs}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-most-effective-weapon"></div>
+                                <div>
+                                    <span class="title">TOP WEAPON</span>
+                                    <span class="value">{{stats.planted_bombs}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-sm-3">
+                        <div class="stats">
+                            <div class="line">
+                                <div class=" esi-30 esi-kill-ratio"></div>
+
+                                <div>
+                                    <span class="title">KILL RATIO</span>
+                                    <span class="value">{{stats.kill_ratio}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-average-kill-rate-respawn"></div>
+
+                                <div>
+                                    <span class="title">HS RATIO</span>
+                                    <span class="value">{{stats.headshots_ratio}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-shot-hits"></div>
+
+                                <div>
+                                    <span class="title">SHOTS HITS</span>
+                                    <span class="value">{{stats.shots_hit}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-accuracy-attack"></div>
+                                <div>
+                                    <span class="title">ACCURACY</span>
+                                    <span class="value">{{stats.acuracy }}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-deaths-ratio"></div>
+
+                                <div>
+                                    <span class="title">DEAD RATIO</span>
+                                    <span class="value">{{stats.death_ratio}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class=" esi-30 esi-total-bombs_defused"></div>
+
+                                <div>
+                                    <span class="title">DEFUSED C4</span>
+                                    <span class="value">{{stats.defused_bombs}}</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <i class="esi-30  esi-best-map"></i>
+
+                                <div>
+                                    <span class="title">TOP MAP</span>
+                                    <span class="value">de_dust</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </player-back>
+</div>

@@ -1,0 +1,57 @@
+<section class="tab-pane" ng-show="selected">
+    <div class="community-tab">
+        <div class="community-search-bar">
+            <div class="secundary-filter-box">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label class="filter-label">FILTER BY</label>
+                    </div>
+                    <div class="form-group">
+                        <div dropdown-multiselect options="networkDropdown"
+                             selected-model="_network_filter"
+                             extra-settings="filter_settings" checkboxes="true"
+                             translation-texts="{buttonDefaultText: 'NETWORK'}"></div>
+                    </div>
+                    <div class="form-group">
+                        <div dropdown-multiselect options="genderDropdown"
+                             selected-model="_gender_filter"
+                             extra-settings="filter_settings" checkboxes="true"
+                             translation-texts="{buttonDefaultText: 'GENDER'}"></div>
+                    </div>
+                    <div class="form-group">
+                        <a class="filter-button" data-ng-click="selectAll()">select all</a>
+                    </div>
+                    <div class="form-group">
+                        <a class="filter-button" data-ng-click="unSelectAll()">unselect all</a>
+                    </div>
+
+                    <div class="form-group pull-right">
+                        <input type="text" class="form-control input-sm" placeholder="FIND FRIENDS" name="srch-term"
+                               id="srch-term" ng-model="query">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-ng-if="isUserSocialConnected"> <!-- profile connected -->
+            <invite-nav-tabs>
+                <viewall title="VIEW ALL" type="social">
+                </viewall>
+                <selected title="SELECTED" type="social">
+                </selected>
+                <unselected title="UNSELECTED" type="social">
+                </unselected>
+                <invitemail title="INVITE" type="email">
+                </invitemail>
+            </invite-nav-tabs>
+        </div>
+
+        <div data-ng-if="!isUserSocialConnected"> <!-- profile NOT connected -->
+            <invite-nav-tabs>
+                <invitesocial title="INVITE" type="social">
+                </invitesocial>
+                <invitemail title="INVITE" type="email">
+                </invitemail>
+            </invite-nav-tabs>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+<div class="tournament-detail-loader" ng-show="init">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <div class="loader-wrapper">
+                <canvas id="game-loader-canvas" width="450" height="292"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 ">
+
+            <div class="registered_teams transparent">
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="t in match.teams" ng-if="match.teams.length > 1">
+                        <ul class="teams full">
+                            <li class="col-md-6" ng-init="outerIndex = $index">
+                                <div class="result" ng-class="{'pull-left':outerIndex==1,'pull-right':outerIndex==0}"
+                                     ng-repeat="team in match_detail.ranking" ng-if="team.team.id == t.id">
+                                    <div class="total-rounds-win "
+                                         ng-class="{'pull-left':outerIndex==1,'pull-right':outerIndex==0}">
+                                        {{team.t_wins + team.ct_wins}}
+                                    </div>
+                                    <div class="round-sets"
+                                         ng-class="{'pull-left':outerIndex==1,'pull-right':outerIndex==0}">
+                                        <div class="round">
+                                            <img src="/images/tournament/csgo/teams/terrorist.png">
+
+                                            <div class="value">
+                                                {{team.t_wins}}
+                                            </div>
+                                        </div>
+                                        <div class="round">
+                                            <img src="/images/tournament/csgo/teams/counter.png">
+
+                                            <div class="value">
+                                                {{team.ct_wins}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-6" ng-repeat="p in t.players">
+                                <div class="bracket-team loss">
+                                    <div class="bracket-team-content">
+                                        <img class=" circle"
+                                             ng-src="{{p.user.avatar}}" alt="user">
+                                        <h4>{{'LOBBY.LABEL.TEAM'|translate}} {{t.name}}</h4>
+                                        <h5>{{p.user.username}}</h5>
+                                    </div>
+                                    <div class="bracket-team-footer loss">
+                                        <div class="status">
+                                            LVL {{p.lvl}}
+                                        </div>
+                                        <div class="members">
+                                            {{'LOBBY.LABEL.PLAYING'|translate}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-offset-1 col-md-4" ng-if="match.teams.length == 1">
+                        <ul class="teams full">
+
+                            <li class="col-md-offset-1 col-md-4" ng-repeat="p in match.teams[0].players">
+                                <div class="bracket-team loss">
+                                    <div class="bracket-team-content">
+                                        <img class=" circle"
+                                             ng-src="{{p.user.avatar}}" alt="user">
+                                        <h4>{{p.user.username}}</h4>
+                                        <h5><br></h5>
+                                    </div>
+                                    <div class="bracket-team-footer loss">
+                                        <div class="status">
+                                            LVL {{p.lvl}}
+                                        </div>
+                                        <div class="members">
+                                            {{'LOBBY.LABEL.PLAYING'|translate}}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

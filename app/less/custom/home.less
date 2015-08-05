@@ -1,0 +1,210 @@
+
+.home_tab_container {
+  margin-top: -45px;
+  @media (min-width: @screen-sm-min) {
+    margin-top: -120px;
+  }
+  .inner-container {
+    padding: 20px;
+    background: #FFFFFF;
+    h3 {
+      color: @electronic-red;
+      span {
+        color: @electronic-black;
+      }
+    }
+  }
+}
+
+.featured-container {
+  .slick-slider {
+    width: 100%;
+  }
+  .advert {
+    .responsive-slider(290px);
+    .caption {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      color: #FFF;
+      font-family: @font-family-electronic-stars-title;
+      #gradient > .vertical(@start-color: rgba(223,59,69,0.3);@start-percent:0%; @end-color:  rgba(223,59,69,0.3));
+      a {
+        cursor: pointer;
+        color: #FFF;
+        text-decoration: none;
+        .name {
+          font-size: 50px;
+          margin: 80px 0px 0px 0px;
+          display: block;
+          text-align: center;
+        }
+        .prize {
+          font-size: 35px;
+          display: block;
+          text-align: center;
+        }
+
+      }
+
+    }
+  }
+}
+
+.news-container {
+  margin-top: 20px;
+  .responsive-slider(330px);
+  .slider-caption {
+    background-color: @electronic-grey;
+    padding: 10px;
+    h3 {
+      color: #FFF;
+      font-size: 20px;
+      a {
+        color: #FFF;
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+  .slick-dots {
+    text-align: right;
+    padding-right: 20px; //have to be the same of the tournmanet-ctrl
+    right: 0;
+    bottom: 10px;
+    list-style: none;
+    //bottom: -30px;
+    width: 38%;
+    z-index: 5;
+    li {
+      width: 20px;
+      height: 20px;
+      background-color: @grey2A2A2A-color;
+      > button {
+        width: 20px;
+        height: 20px;
+        padding: 0px;
+      }
+      > button:before {
+        content: none;
+      }
+    }
+    .slick-active {
+      background-color: @electronic-white;
+    }
+  }
+  .slick-track {
+    width: 100%;
+  }
+}
+
+.bottom-home-image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  height: 310px;
+  width: 100%;
+  border: 1px solid @electronic-red;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+  }
+
+  .first-title {
+    // font-size: 25px;
+    font-size: 1.5em;
+    color: @electronic-white;
+    z-index: 2;
+    position: absolute;
+    top: 140px;
+    left: 38px;
+  }
+  .second-title {
+    //font-size: 34px;
+    font-size: 2.3em;
+    color: @electronic-red;
+    z-index: 2;
+    position: absolute;
+    top: 170px;
+    left: 40px;
+  }
+}
+
+.game_center_red_button {
+  a {
+    //general style
+    display: inline-block;
+    margin-top: 20px;
+    background-color: @electronic-red;
+    font-size: 1.7em;
+    text-align: left;
+    h3 {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    i {
+      margin-left: 10px;
+      font-size: 1.5em;
+    }
+  }
+  //tablet style
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    a {
+      font-size: 0.9em !important; //bigger resolution is 1.7em 24px
+      i {
+        font-size: 1.7em !important;
+      }
+      h3 {
+        //margin-left: 5px !important;
+        font-size: 1.7em !important; //bigger resolution is 1.7em
+      }
+    }
+  }
+}
+
+.game-center-box {
+  margin-top: 20px;
+  a {
+    .responsive-padding(15px);
+    text-align: left;
+    > i {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 22px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      > i {
+        font-size: 26px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        margin: 0 10px;
+        font-size: 24px;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      > i {
+        font-size: 26px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        margin: 0 10px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+

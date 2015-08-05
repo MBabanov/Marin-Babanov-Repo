@@ -1,0 +1,1174 @@
+// landing page **************************
+
+.black-container {
+  width: 100%;
+  background-color: black;
+  //margin-top: -50px;
+  //text-align: center;
+}
+
+.special {
+  position: absolute;
+  z-index: 4;
+  .col-red {
+    display: inline-block;
+    width: 360px;
+    margin-right: 26px;
+    position: relative;
+    background-color: @electronic-red;
+    opacity: 0.2;
+    height: 4200px;
+    z-index: 4;
+  }
+}
+
+.landing-slider-container {
+  position: relative;
+  min-height: 340px !important;
+
+  img {
+    width: 100%;
+    min-height: 340px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  // this is the reb box just down the slider
+  .red-icon {
+    width: 100%;
+    background-color: @electronic-red;
+    z-index: 2;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.8;
+    //padding: 1%;
+    @media (min-width: 992px) and (max-width: 1365px) {
+      margin-top: -135px;
+      .play-icon {
+        > div {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+        }
+      }
+
+    }
+    @media (min-width: 1366px) and (max-width: 1700px) {
+      margin-top: -135px;
+      .play-icon {
+        > div {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+    @media (min-width: 1701px) and (max-width: 1920px) {
+      margin-top: -180px;
+      .play-icon {
+        > div {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+    @media (min-width: 1921px) {
+      margin-top: -180px;
+      .play-icon {
+        > div {
+          width: 100px;
+          height: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    // this is the box for each icon
+    .play-icon {
+      //text-align: center;
+      //padding-left: 10%;
+      position: relative;
+      font-family: @font-electronic-stars-icon; //icomoon
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      margin-top: -15px;
+
+      > div {
+        &.login {
+
+        }
+        &.login:before {
+          content: "\e604";
+          font-size: 7em; //50px;
+          color: @electronic-white;
+        }
+        &.login:after {
+          position: absolute;
+          font-family: FontAwesome;
+          top: 25px;
+          right: -10%;
+          font-size: 3.4em; //50px;
+          content: "\f054";
+          color: darkred;
+        }
+        &.play {
+
+        }
+        &.play:before {
+          content: "\e602";
+          font-size: 7em; //50px;
+          color: @electronic-white;
+        }
+
+        &.play:after {
+          position: absolute;
+          font-family: FontAwesome;
+          top: 25px;
+          right: -10%;
+          font-size: 3.4em; //50px;
+          content: "\f054";
+          color: darkred;
+        }
+        &.win {
+
+        }
+        &.win:before {
+          content: "\e600";
+          font-size: 7em; //50px;
+          color: @electronic-white;
+        }
+      }
+      h5 {
+        color: @electronic-white;
+        margin-top: -10px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 40px;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .red-button-register {
+    // width: 20%;
+    font-size: 1.5em; //24px;
+    font-weight: bold;
+    height: 50px;
+  }
+  // en la vida hay muchas optionses
+  .ganar_dinero_counter_strike_electronicstars {
+    /* >img{
+      display: inline-block;
+    }*/
+    > div > div {
+      height: 500px;
+      width: 400px;
+      z-index: 99;
+      position: absolute;
+      top: 67%;
+      left: 50%;
+
+      .red-button {
+        display: inline-block;
+        font-size: 1.5em; //24px;
+        padding-right: 150px;
+        padding-left: 150px;
+        font-weight: bold;
+        margin-left: -394px;
+      }
+    }
+  }
+  //laptopo gamers style
+  .ganar_dinero_jugando_videojuegos_electronicstars {
+    > div {
+      height: 500px;
+      display: block;
+      z-index: 99;
+      position: absolute;
+      max-width: 400px;
+      top: 25%;
+      left: 15%;
+      .sm-text {
+        color: @electronic-white;
+        font-size: 1.1em; //16px;
+        display: block;
+      }
+      .md-text {
+        color: @electronic-white;
+        font-size: 2.2em; //30px;
+        text-transform: uppercase;
+        display: block;
+      }
+      .lg-text {
+        color: @electronic-red;
+        font-size: 4.5em; //54px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+      }
+      .red-button {
+        // width: 20%;
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+    }
+  }
+  //tirdth slide mafia slide sacale provechop
+  .ganar_dinero_videojuegos_electronicstars {
+    > div {
+      position: absolute;
+      height: 500px;
+      z-index: 99;
+      top: 15%;
+      left: 33%;
+      font-weight: bold;
+      font-size: 70px;
+      letter-spacing: -5px;
+      word-spacing: 4px;
+
+      .distance {
+        letter-spacing: 9px;
+      }
+      .sm-text {
+        color: @electronic-white;
+        text-transform: uppercase;
+        display: block;
+      }
+      .sm-text::first-letter {
+        font-size: 200%;
+      }
+      .md-text {
+        color: @electronic-red;
+        text-transform: uppercase;
+        float: right;
+      }
+      .red_text {
+        color: @electronic-red;
+      }
+    }
+  }
+  //conviertete en un pro gamer
+  .ingresos_jugando_videojuegos_electronic_stars {
+    > div {
+      position: absolute;
+      z-index: 99;
+      top: 32%;
+      left: 42%;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
+      line-height: 1.1;
+      font-size: 60px;
+      //max-width: 350px;
+      .sm-text {
+        color: @electronic-white;
+      }
+      .md-text {
+        color: @electronic-red;
+        text-transform: uppercase;
+        display: block;
+      }
+      .lg-text {
+        color: @electronic-red;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+      }
+      .red-button {
+        margin-top: 30px;
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        max-width: 350px;
+        //height: 50px;
+      }
+    }
+  }
+  //fourth slide
+  .jugar_esports_online_electronicstars {
+    > div {
+      z-index: 99;
+      top: 30%;
+      right: 20%;
+      //max-width: 350px;
+      .sm-text {
+        color: @electronic-white;
+        font-size: 1.1em; //16px;
+        display: block;
+      }
+      .md-text {
+        color: @electronic-white;
+        font-size: 2.1em; //30px;
+        text-transform: uppercase;
+        display: block;
+      }
+      .lg-text {
+        color: @electronic-red;
+        font-size: 4.4em; //54px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+      }
+      .red-button {
+        // width: 20%;
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        max-width: 350px;
+        //height: 50px;
+      }
+    }
+  }
+  .ganar_dinero_esports_electronicstars {
+    > div {
+      position: relative;
+      z-index: 99;
+      top: 50%;
+      left: 40%;
+      height: 500px;
+      // max-width: 350px;
+      .sm-text {
+        color: @electronic-white;
+        font-size: 16px;
+        display: block;
+      }
+      .md-text {
+        color: @electronic-white;
+        font-size: 28px;
+        text-transform: uppercase;
+        display: block;
+      }
+      .lg-text {
+        color: @electronic-red;
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+  }
+  //fiveth slide
+  .servidor_rFactor_gratis_electronicstars {
+    > div {
+      position: absolute;
+      z-index: 99;
+      top: 24%;
+      left: 28%;
+      font-size: 68px;
+      font-weight: bold;
+      max-width: 500px;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      -webkit-transform: rotate(19deg);
+      -moz-transform: rotate(19deg);
+      -ms-transform: rotate(19deg);
+      -o-transform: rotate(19deg);
+      transform: rotate(19deg);
+      // max-width: 500px;
+      .sm-text {
+        color: @electronic-red;
+        float: right;
+        margin-bottom: 180px;
+      }
+      .md-text {
+        color: @electronic-white;
+      }
+      .red-text {
+        color: @electronic-red;
+      }
+    }
+  }
+
+}
+
+.video_container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  //height: 395px;
+  @media (min-width: @min-phone) and (max-width: @max-phone) {
+    .landingVideo {
+      //height: 190px;
+      margin-bottom: 20px;
+    }
+
+    aside {
+      margin-top: 20px;
+
+      .sign-up-container {
+        margin-left: 0px !important;
+      }
+    }
+  }
+
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    aside {
+      margin-top: 20px;
+      li {
+        margin-bottom: 15px;
+      }
+      .sign-up-container {
+        // position: static;
+        margin-top: 20px !important;
+        margin-left: 0px !important;
+      }
+    }
+
+    .landingVideo {
+      height: 395px;
+      margin-bottom: 20px;
+
+    }
+  }
+  @media (min-width: @min-xs-desktop) and (max-width: @max-lg-desktop) {
+    aside {
+      margin-top: 10px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @media (min-width: @max-lg-more) {
+    aside {
+      margin-top: 10px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  //general property
+  .landingVideo {
+    border: solid 20px @electronic-white;
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  aside {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.2em; //18px;
+    /* padding-right: 80px; */
+    line-break: 2;
+    z-index: 99;
+    padding-top: -10px;
+    max-height: 395px;
+    font-family: @font-family-electronic-stars-title;
+    ol {
+      margin-top: -15px;
+      list-style: number;
+      li {
+        color: @electronic-red;
+        //margin-bottom: 20px;
+        // margin-top: 20px;
+        span {
+          color: @electronic-white;
+        }
+      }
+    }
+
+    .sign-up-container {
+      width: 100%;
+      margin-left: 20px;
+      bottom: auto;
+      a {
+        //margin: 0px 0px 0px 40px;
+        font-size: 1.2em; //18px;
+        font-weight: bold;
+        color: @electronic-white;
+        padding: 15px 30px 15px 30px;
+      }
+    }
+  }
+}
+
+.landing_tournament_section_title {
+  background-color: #1a1a1a !important;
+}
+
+.landing_section_container {
+  background-color: #302e2f;
+  width: 100%;
+
+  .landing_section_title {
+    border-bottom: 6px solid @electronic-red;
+    position: relative;
+    font-family: @font-family-electronic-stars-logo;
+    word-spacing: -0.2em;
+    // font-size: 2.9em;
+    .red-box-title {
+      background-color: @electronic-red;
+      margin-top: 40px; //tot height 120 = box +margin
+      width: 80px;
+      height: 80px;
+    }
+    > span {
+      //title text
+      color: @electronic-red;
+      position: absolute;
+      bottom: 10px;
+      left: 40px;
+      > span {
+        color: #302E2F;
+      }
+      .text-white {
+        color: @electronic-white;
+        font-family: @font-family-electronic-stars-thin;
+        word-spacing: 0;
+      }
+    }
+  }
+  //media query for title text size
+  @media (max-width: @max-phone) {
+    .landing_section_title {
+      font-size: 2em;
+      .text-white {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    .landing_section_title {
+
+      .red-box-title {
+      }
+      > span {
+        //text position
+        font-size: 2.4em;
+        /*bottom: 15px;
+        left: 30px;*/
+        .text-white {
+          //font-size: 1em !important; does not work
+          display: none;
+        }
+      }
+    }
+  }
+  @media (min-width: @min-xs-desktop) {
+    //no range for now
+    .landing_section_title {
+      font-size: 2.9em;
+      > span {
+        left: 30px;
+      }
+    }
+  }
+}
+
+//conteinr for player perks section
+.perks_boxes_container {
+  padding-top: 20px;
+  padding-bottom: 20px; //margin for the big container
+  background-color: #e5e5e5;
+  width: 100%;
+
+  .perks_box_container {
+    //container for single box
+
+    margin-bottom: 20px; //margin for each
+    //    max-width: 370px;
+    //    position: relative;
+    background: #FFF;
+    margin-left: auto; // affect ONLY mobile
+    margin-right: auto; //tambien
+
+    .box-title {
+      color: @electronic-red;
+      background-color: @grey302E2F-color;
+      text-align: center;
+      text-transform: uppercase;
+      h4 {
+        margin: 0px;
+        padding: 20px 0%;
+        font-size: 20px;
+        @media (min-width: @screen-sm-min) {
+          font-size: 17px
+        }
+        @media (min-width: @screen-md-min) {
+          font-size: 15px
+        }
+        @media (min-width: @screen-lg-min) {
+          font-size: 17px;
+        }
+      }
+
+    }
+
+    .box-text {
+      height: 160px;
+      text-align: center;
+      background: #FFF;
+      color: @electronic-black;
+      p {
+        padding: 13.5% 5%;
+        margin: 0px;
+      }
+    }
+  }
+  .signup-title-box {
+    //margin-top: 20px;
+    //z-index: 99;
+    .signup-title {
+      color: @electronic-white;
+      font-size: 1.9em;
+      font-weight: bold;
+      padding: 15px 0px 15px 0px;
+    }
+  }
+}
+
+//paymet box
+.payment_background_container {
+  background-color: @electronic-white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: block;
+
+  .payment_title {
+    color: @electronic-white;
+    background-color: @electronic-red;
+    padding: 12px 20px 12px 20px;
+    font-family: @font-family-electronic-stars-title;
+    font-weight: 500;
+    line-height: 1.8;
+  }
+  .payment_container {
+    border: solid 5px @electronic-red;
+    background-color: @electronic-white;
+    padding: 10px;
+    width: 100%;
+    min-height: 60px;
+    display: inline-block;
+
+    #card1 {
+      //visa
+      background-image: url('../images/sprites/landing.png');
+      background-position: -3px 264px;
+      width: 70px;
+      display: inline-block;
+      margin-top: 4px;
+      height: 50px;
+    }
+    #card2 {
+      //mastercard
+      background-image: url('../images/sprites/landing.png');
+      background-position: -80px 264px;
+      width: 75px;
+      display: inline-block;
+      margin-top: 4px;
+      height: 50px;
+    }
+
+    .pay-read-more {
+      //position: relative;
+      //width: max is 40% but is determined by padding;
+      color: @electronic-white;
+      font-weight: bold;
+      width: 34%;
+
+      text-align: center;
+      min-height: 60px;
+      a {
+        padding: 5px 10px 5px 10px;
+        position: absolute; /* 2 */
+        top: 50%; /* 3 */
+        transform: translate(0, -50%);
+      }
+    }
+
+  }
+}
+
+.tournament_container {
+  background-color: #302e2f;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media (min-width: @min-phone) and (max-width: @max-tablet) {
+    .tournament_table {
+
+    }
+  }
+  //generic css
+  .tournament_table {
+    background-color: @electronic-white;
+    color: @electronic-black;
+    display: inline-block;
+    //margin-bottom: 20px;
+    width: 100%;
+    //min-height: 430px;
+    .tournament_table_header {
+      font-family: @font-family-electronic-stars-logo;
+      background-color: @electronic-black;
+      color: @electronic-red;
+      text-align: left;
+      padding: 20px;
+      font-size: 2em;
+      min-height: 84px; //img height 44px + padding top 20px + padding-bottom 20p
+
+      img {
+        float: left;
+        height: 44px;
+        width: 44px;
+      }
+      span {
+        // header text
+        margin-left: 15px;
+        position: relative;
+        line-height: 90%;
+        display: block;
+      }
+    }
+    > table {
+      width: 100%;
+      text-align: center !important;
+      > thead {
+        background-color: @electronic-grey-lighter;
+        font-weight: bold;
+        color: @electronic-white;
+        > tr {
+          height: 40px;
+          > td {
+            padding-left: 4px;
+            padding-right: 4px;
+          }
+          .r_border_lightgrey {
+            border-right: 1px solid @electronic-white;
+          }
+        }
+      }
+      > tbody > tr {
+        height: 45px;
+      }
+      border-collapse: collapse;
+      border-style: hidden;
+      .col-date, .col-player {
+        color: @electronic-red;
+        font-weight: bold;
+      }
+      .col-player {
+        background-color: @greyE5E5E5-color;
+      }
+      .r_border_lightgrey {
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .tournament_slider {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-height: 395px;
+    .tournament_slider_manager {
+      background-color: @electronic-black;
+      font-family: @font-family-electronic-stars-logo; //clampro bold
+      height: 60px;
+      width: 100%;
+      padding: 15px;
+      position: absolute;
+      bottom: 0; //always on bottom of the slider container
+      color: @electronic-white;
+      z-index: 2;
+
+      .fa-gamepad {
+        font-size: 2.1em; //36px;
+        color: @electronic-white;
+      }
+      span {
+        font-size: 1.6em; //28px;
+        padding-left: 5px; //after the icon
+      }
+    }
+    slick {
+      img {
+        width: 100%;
+        //min-height: 395px;
+        min-height: 448px;
+      }
+      /* @media (min-width: @min-phone) and (max-width: @max-phone) {
+         .slick-dots {
+           bottom: 10px;
+         }
+       }
+       @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+         .slick-dots {
+           bottom: 10px;
+         }
+       }
+       @media (min-width: @min-xs-desktop) and (max-width: @max-lg-more) {
+         .slick-dots {
+           bottom: 10px;
+         }
+       }*/
+      .slick-dots {
+        text-align: right;
+        padding-right: 20px; //have to be the same of the tournmanet-ctrl
+        right: 0;
+        bottom: 10px;
+        list-style: none;
+        //bottom: -30px;
+        width: 38%;
+        z-index: 5;
+        li {
+          width: 20px;
+          height: 20px;
+          background-color: @grey2A2A2A-color;
+          > button {
+            width: 20px;
+            height: 20px;
+            padding: 0px;
+          }
+          > button:before {
+            content: none;
+          }
+        }
+        .slick-active {
+          background-color: @electronic-white;
+        }
+      }
+      .slick-track {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// end tournament section
+/* LANDING LAST SECTION */
+.getme_container {
+  background-color: @black1A1A1A-color;
+  width: 100%;
+  height: 100%;
+  //hide with phone
+  /*@media (min-width: @min-phone) and (max-width: @max-phone) {
+    //hide
+  }
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    //hide
+  }*/
+  //we created this breakpoint to arrange the size of our image witch is large 1087
+  /* @media (min-width: @min-xs-desktop) and (max-width: 1155px) {
+     .box-landing-5 {
+       left: 425px !important;
+     }
+     //after that breakpopint  the position become normal
+   }*/
+
+  @media (min-width: @min-xs-desktop) and (max-width: 1199px) {
+    .image_container {
+      width: 100% !important; //set by container width
+      height: 100% !important; //set by height of image
+      min-height: 803px;
+      .box-landing-2 {
+        top: 220px !important;
+        left: 270px !important;
+      }
+      .box-landing-3 {
+        top: 390px !important;
+        left: 400px !important;
+      }
+      .box-landing-5 {
+        left: 500px !important;
+        .text-box {
+          padding: 0px 25px 0px 15px !important;
+        }
+      }
+    }
+  }
+  .bold {
+    font-weight: bold;
+  }
+
+  //inside my container
+  .image_container {
+    background: url('../images/landing/get_me_started_cut_02.png') no-repeat center;
+    background-size: 100%;
+    height: 858px; //height of my image
+    width: 1001px; //width of my image
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    .red_border_bar {
+      //on top to close tournmanet section
+      border-bottom: 8px solid @electronic-red;
+    }
+
+    .box-landing-1 {
+      // position: absolute;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 300px;
+      line-height: 196%;
+      font-family: @font-family-electronic-stars-title;
+      text-transform: uppercase;
+      span:first-child {
+        //get me
+        font-size: 3.9em;
+        color: @electronic-white;
+      }
+      span:last-child {
+        //started
+        color: @electronic-red;
+        font-weight: 800;
+        font-size: 4.4em; //64px;
+      }
+    }
+    .box-landing-2 {
+      position: absolute;
+      top: 250px;
+      left: 300px;
+      text-align: center;
+      color: @electronic-white;
+      > span {
+        margin-bottom: 8px;
+      }
+      > a {
+        display: block;
+        color: @electronic-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        // padding: 7px 20px 7px 20px;
+      }
+    }
+    .box-landing-3 {
+      position: absolute;
+      left: 430px;
+      top: 420px;
+      width: 250px;
+      color: @electronic-white;
+      padding: 20px 50px 20px 50px;
+    }
+
+    .box-landing-4 {
+      position: absolute;
+      width: 235px;
+      top: 525px;
+      left: -30px;
+      color: @electronic-white;
+      padding: 20px 55px 20px 30px;
+      text-align: right;
+    }
+    .box-landing-5 {
+      position: absolute;
+      bottom: 0;
+      left: 530px;
+      color: @electronic-white;
+      padding: 0px 10px 0 10px;
+      width: 460px;
+      height: 130px;
+      .steam-box {
+        background-color: @electronic-white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        text-align: center;
+        color: @electronic-red;
+        width: 250px;
+        height: 130px;
+        padding: 10px 40px 0px 40px;
+        position: absolute;
+        div {
+          position: relative;
+          margin: 10px 50px 0px 50px;
+        }
+        .steam-icon {
+          height: 40px;
+          background-image: url('../images/sprites/landing.png');
+          background-position: -35px 0px;
+        }
+        span:last-child {
+          font-weight: bold;
+        }
+      }
+      .text-box {
+        width: 200px;
+        position: relative;
+        float: right;
+        top: 10px;
+        padding: 0px 15px 0px 15px;
+      }
+    }
+  }
+}
+
+//close container
+
+.signup_red_container {
+  width: 100%;
+  color: @electronic-white;
+  background-color: @electronic-red;
+  font-size: 1.4em; //22px;
+  z-index: 2;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: left;
+  @media (min-width: @min-phone) and (max-width: @max-phone) {
+    input {
+      border-bottom: 2px solid #808080 !important;
+      font-size: 0.8em !important;
+    }
+
+    .error_message_container {
+      top: 0px;
+      right: 0px;
+      //overlapsys with placeholder
+    }
+  }
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    .error_message_container {
+      top: 0px;
+      right: 0px;
+      //overlapsys with placeholder
+    }
+
+    input {
+      border-bottom: 1px solid #cccccc !important;
+      font-size: 0.8em;
+    }
+  }
+  @media (min-width: @min-xs-desktop) and (max-width: @max-lg-desktop) {
+    button {
+      width: 33%;
+      float: right;
+    }
+
+    input {
+      width: 67% !important;
+    }
+
+    .error_message_container {
+      top: 0px;
+      right: 35%;
+      //overlapsys with placeholder
+    }
+
+    .bar {
+      //check this cz is delicated
+      position: absolute;
+      left: 66%;
+      height: 63px;
+      width: 7px;
+
+    }
+  }
+  @media (min-width: @max-lg-more) {
+    button {
+      width: 33%;
+      float: right;
+    }
+
+    input {
+      width: 67% !important;
+    }
+
+    .error_message_container {
+      top: 0px;
+      right: 35%;
+      //overlapsys with placeholder
+    }
+
+    .bar {
+      //check this cz is delicated
+      position: absolute;
+      left: 66%;
+      height: 63px;
+      width: 7px;
+
+    }
+  }
+  input {
+    font-family: @font-family-electronic-stars-thin; //roboto thin
+    outline: none;
+    display: inline-block;
+    padding: 15px 20px 15px 20px;
+    width: 100%;
+    border: 1px solid @electronic-white;
+    float: left;
+    font-size: 1.8em;
+    height: 63px;
+    z-index: 4;
+  }
+  //input style for placeholder
+  input::-webkit-input-placeholder {
+    color: @electronic-black;
+  }
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    color: @electronic-black;
+  }
+  input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: @electronic-black;
+  }
+  input:-ms-input-placeholder {
+    color: @electronic-black;
+  }
+  .bar {
+    background-color: #808080;
+    //width: 10px;
+    //height: 100%;
+    display: inline-block;
+    //position: absolute;
+    //right: 350px;
+    z-index: 5;
+    background: -webkit-linear-gradient(left, @electronic-white,@greyE5E5E5-color); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right,@greyE5E5E5-color, @electronic-white,@greyE5E5E5-color); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right,@greyE5E5E5-color, @electronic-white,@greyE5E5E5-color); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, @electronic-white,@greyE5E5E5-color); /* Standard syntax */
+  }
+  button {
+    background-color: @electronic-white;
+    display: inline-block;
+    word-spacing: -7px;
+    text-decoration: none;
+    border: 1px solid @electronic-white;
+    color: @electronic-red !important;
+    text-align: center;
+    height: 63px;
+    font-family: @font-family-electronic-stars-logo;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .error_message_container {
+    // error message shoulb be positioned inside the input align to the right
+    position: absolute;
+    z-index: 5;
+    margin: 10px;
+    padding: 10px;
+    background-color: @electronic-white; //Let's go over the placeholder
+    color: @electronic-red;
+    overflow: hidden;
+    i {
+      //fa-exclamation-icon
+      margin-left: 5px;
+      margin-right: 5px;
+      color: @electronic-red
+    }
+  }
+  .btn[disabled] {
+    opacity: 1;
+    // cursor: pointer;
+    //color: @grey979796-color !important;
+  }
+  .btn[disabled]:hover {
+    cursor: pointer;
+  }
+  button:hover, button:active {
+    background-color: #d3d3d3;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+
+
+

@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="btn-close-wrapper">
+        <button class="btn btn-close" ng-click="_tour.close()">x</button>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+
+        </div>
+        <div class="col-md-4">
+            <div class="tournament-list-box">
+                <div class="secundary-filter-box">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label>Filter By</label>
+                        </div>
+
+                        <div class="form-group">
+
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<div dropdown-multiselect options="example1data" selected-model="_type_filter"-->
+                        <!--extra-settings="filter_settings" checkboxes="true"-->
+                        <!--translation-texts="{buttonDefaultText: 'TYPE'}"></div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="table-box">
+                    <table class="table table-tournaments">
+                        <thead>
+                        <tr>
+                            <th style="width: 26.2%;text-align: left;padding-left: 20px">track name</th>
+
+                            <th style="width: 15%">type</th>
+                            <th style="width: 10%">players</th>
+                            <th style="width: 12.1%">prize</th>
+
+                            <th style="width: 20%">details</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div class="table-content-scrollable" scroll-bar>
+                        <table class="table table-tournaments">
+                            <tbody>
+                            <tr ng-repeat="t in _tour.tournaments |  filter:_tour._filter_by_name | filter:_tour._filter_by_config | filter:_tour._filter_by_players | filter:_tour._filter_by_status | filter:srch_term | orderBy:_tour.order_by_status">
+                                <td style="width: 27%;text-align: left;padding-left: 10px;">
+                            <span class="circle"
+                                  ng-class="{'in-progress':t.status=='IN_PROGRESS','registering':t.status=='REGISTRATION','finished':t.status=='FINISHED'}"></span>{{t.name}}
+                                </td>
+
+
+                                <td style="width: 15.2%">{{t.modality}}</td>
+                                <td class="red" style="width: 10.5%">
+                                    {{t.registered_players}}/{{t.config.type.num_players
+                                    *t.config.type.num_teams}}
+
+                                    <span ng-if="t.get_modified()=='more'" class="animated flash"><i
+                                            class="fa fa-arrow-up"></i> </span>
+                            <span ng-if="t.get_modified()=='less'" class="animated flash"><i
+                                    class="fa fa-arrow-down"></i> </span>
+                                </td>
+                                <td class="red" style="width: 10.3%">{{t.register_amount}}</td>
+
+                                <td style="width: 20%">
+                                    <button class="btn btn-tournament-detail"
+                                            ng-click="_tour.tournament_detail(t,false)">MORE
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>

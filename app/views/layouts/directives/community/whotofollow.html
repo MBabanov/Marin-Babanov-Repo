@@ -1,0 +1,27 @@
+<section class="box-with-header who-to-follow">
+    <div class="box-header">
+        <i class="fa fa-users"></i>
+
+        <h3>WHO TO FOLLOW</h3>
+    </div>
+    <div class="box-content">
+        <ul>
+            <li data-ng-repeat="user in whoToFollowUsers track by $index">
+                <div class="user-community-info">
+                    <img class="user-circle" ng-src="{{user.avatar}}">
+
+                    <div class="user-container">
+                        <span class="user-name">{{user.username}}</span>
+                        <span class="user-level">LEVEL {{user.level}}</span>
+
+                        <div class="user-multiplier">
+                            <div multiplier-same-size="{{user.multiplier}}">
+                            </div>
+                        </div>
+                        <button class="user-follow-btn" data-ng-click="followUser(user)">follow</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

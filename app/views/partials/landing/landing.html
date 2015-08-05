@@ -1,0 +1,406 @@
+<section class="black-container">
+  <div class="landing-slider-container" ng-cloak>
+    <slick infinite=true arrows='false' slidesToShow="1" fade="true" autoplay="true"
+           autoplaySpeed="2000" current-index="index" adaptiveHeight="true" ng-cloak>
+      <div ng-repeat="slide in annoucements">
+        <img ng-src="{{slide.cover}}" class="img-responsive"/>
+
+        <!--<div class="content_layout" ng-repeat="content in slide.contents | filter:{language:_app.language.key}">-->
+          <!--<div ng-bind-html="content.content">-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--Advert with the guy fisting the monitor-->
+        <div class="advertFist">
+          <div>
+            <h1 class="text_medium_white">TORNEOS CSGO</h1>
+            <h1 class="text_big_red">1on1</h1>
+            <h1 class="text_medium_white">¡TODOS LOS DIAS!</h1>
+            <h1 class="text_big_red">¡GRATIS!</h1>
+          </div>
+        </div>-->
+
+        <!--Advert with Logo and Fireworks-->
+        <!--<div class="advertLogo">
+          <div>
+            <h1 class="text_small_red_logo">¡ÚCOMPITE GRATIS</h1>
+            <h1 class="text_small_white_logo">POR PUNTOS Y</h1>
+            <h1 class="text_small_white_logo">CANJEALOS POR</h1>
+            <h1 class="text_medium_red_logo">PREMIOS!</h1>
+          </div>
+        </div>-->
+
+        <!--Advert with Medal and cash-->
+        <!--<div class="advertMedal">
+          <div>
+            <h1 class="text_medium_red_medal">RENTABILIZA</h1>
+            <h1 class="text_medium_white_medal">TUS HORAS</h1>
+            <h1 class="text_medium_red_medal">DE JUEGO!</h1>
+          </div>
+        </div>-->
+
+    </slick>
+    <div class="red-icon hidden-xs hidden-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="play-icon">
+              <div class="login"></div>
+              <!-- <h5>{{'LANDING.RED_ICONS_BAR.ICON1' | translate }}</h5>-->
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="play-icon">
+              <div class="play"></div>
+              <!-- <h5>{{'LANDING.RED_ICONS_BAR.ICON2' | translate }}</h5>-->
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="play-icon">
+              <div class="win"></div>
+              <!--  <h5>{{'LANDING.RED_ICONS_BAR.ICON3' | translate }}</h5>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- tournament section -->
+<section class="landing_section_container landing_tournament_section_title">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="landing_section_title">
+          <div class="red-box-title"></div>
+                            <span>
+                                <span>{{'LANDING.GAMING_TOURNAMENT.TITLE.FIRST_TEXT' | translate }}</span>{{'LANDING.GAMING_TOURNAMENT.TITLE.SECOND_TEXT' | translate }}
+                                <span
+                                  class="text-white">{{'LANDING.GAMING_TOURNAMENT.TITLE.THIRD_TEXT' | translate }}</span>
+                           </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="tournament_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <!-- <div class="col-md-3 col-sm-12 col-xs-12">-->
+        <div class="tournament_table">
+          <header class="tournament_table_header">
+            <img src="images/logos/logo_loader.png">
+            <span>{{'LANDING.GAMING_TOURNAMENT.TABLE.HEADER.TITLE1' | translate }}</span>
+            <span>{{'LANDING.GAMING_TOURNAMENT.TABLE.HEADER.TITLE2' | translate }}</span>
+          </header>
+          <table class="table-hover">
+            <thead>
+            <tr>
+              <td class="r_border_lightgrey">{{'LANDING.GAMING_TOURNAMENT.TABLE.HEAD.COL1'
+                | translate }}
+              </td>
+              <td class="r_border_lightgrey">
+                {{'LANDING.GAMING_TOURNAMENT.TABLE.HEAD.COL2' | translate }}
+              </td>
+              <td class="r_border_lightgrey">{{'LANDING.GAMING_TOURNAMENT.TABLE.HEAD.COL3'
+                | translate }}
+              </td>
+              <td>{{'LANDING.GAMING_TOURNAMENT.TABLE.HEAD.COL4' | translate }}</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat=" item in tournamentList | orderBy:date"
+                ui-sref="tournaments.list({game_slug: 'counter-strike-go'})">
+              <td class="col-date ">
+                {{item.date}}
+                {{item.time}}
+              </td>
+              <td class="">{{item.name}}</td>
+              <td class="col-player ">{{item.playersNumber}}</td>
+              <td><i class="fa fa-star red"></i> {{item.prize}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- close tournament_table -->
+      <!--  <div class="col-md-3 col-sm-12 col-xs-12">-->
+      <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="tournament_slider">
+          <slick dots='true' arrows='false' infinite=true class="slide" slidesToShow="1"
+                 fade="true"
+                 autoplay="true"
+                 autoplaySpeed="2000"
+            >
+            <div data-ng-repeat="item in tournamentSlides">
+              <img ng-src="{{item.src}}" alt="{{item.alt}}">
+              <!-- <img ng-src="sprite/landing/tournament_sprite.png" class="s{{$index}}" alt="">-->
+            </div>
+          </slick>
+          <div class="tournament_slider_manager">
+            <i class="fa fa-gamepad"></i>
+            <span>{{'LANDING.GAMING_TOURNAMENT.SLIDER_DOTS_TEXT' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- video container -->
+<section class="video_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <section class="landingVideo">
+          <video controls autoplay muted>
+            <source src="multimedia/Counter Strike Global Offensive Trailer-SD.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+      </div>
+      <aside class="col-md-2 col-sm-6 col-xs-12">
+        <ol>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT1' | translate }}</span></li>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT2' | translate }}</span></li>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT3' | translate }}</span></li>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT4' | translate }}</span></li>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT5' | translate }}</span></li>
+          <li><span>{{'LANDING.VIDEO_PROMOTION.TEXT6' | translate }}</span></li>
+        </ol>
+        <!--<div class="sign-up-container hidden-xs hidden-sm">
+            <a ui-sref="register" class="btn btn-block btn-danger" role="button">{{'LANDING.VIDEO_PROMOTION.BUTTON'
+                | translate }}</a>
+        </div>-->
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- perk players container -->
+<section class="landing_section_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <header class="landing_section_title">
+          <div class="red-box-title"></div>
+          <span><span>{{'LANDING.PLAYER_PERKS.TITLE.TEXT1' | translate }}</span>{{ 'LANDING.PLAYER_PERKS.TITLE.TEXT2' | translate }}</span>
+        </header>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="perks_boxes_container">
+  <div class="container">
+    <div class="row">
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container">
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_1.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+            <h4>{{'LANDING.PLAYER_PERKS.BOX_1.TITLE' | translate }}</h4>
+          </header>
+          <div class="box-text">
+            <p>{{'LANDING.PLAYER_PERKS.BOX_1.TEXT' | translate }}</p>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container">
+
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_2.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+
+            <h4>{{ 'LANDING.PLAYER_PERKS.BOX_2.TITLE' | translate }}</h4>
+
+          </header>
+          <div class="box-text">
+
+            <p>{{ 'LANDING.PLAYER_PERKS.BOX_2.TEXT' | translate }}</p>
+
+          </div>
+        </div>
+      </article>
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container">
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_3.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+
+            <h4>{{ 'LANDING.PLAYER_PERKS.BOX_3.TITLE' | translate }}</h4>
+
+          </header>
+          <div class="box-text">
+
+            <p>{{ 'LANDING.PLAYER_PERKS.BOX_3.TEXT' | translate }}</p>
+
+          </div>
+        </div>
+      </article>
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container ">
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_4.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+
+            <h4>{{ 'LANDING.PLAYER_PERKS.BOX_4.TITLE' | translate }}</h4>
+
+          </header>
+          <div class="box-text">
+
+            <p>{{ 'LANDING.PLAYER_PERKS.BOX_4.TEXT' | translate }}</p>
+
+          </div>
+        </div>
+      </article>
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container">
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_5.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+            <h4>{{'LANDING.PLAYER_PERKS.BOX_5.TITLE' | translate }}</h4>
+          </header>
+          <div class="box-text">
+            <p>{{ 'LANDING.PLAYER_PERKS.BOX_5.TEXT' | translate }} </p>
+          </div>
+        </div>
+      </article>
+      <article class="col-md-2 col-xs-6 col-sm-3">
+        <div class="perks_box_container">
+          <figure>
+            <img src="images/landing/peaks/get_gamingx2_6.png" class="img-responsive">
+          </figure>
+          <header class="box-title">
+            <h4>{{ 'LANDING.PLAYER_PERKS.BOX_6.TITLE' | translate }}</h4>
+          </header>
+          <div class="box-text">
+            <p>{{ 'LANDING.PLAYER_PERKS.BOX_6.TEXT' | translate }}</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- closing row -->
+    <div class="row">
+      <div class="col-md-2 col-xs-12 col-md-offset-4 signup-title-box">
+        <a ui-sref="register" class="btn btn-block btn-danger signup-title ">
+          {{'LANDING.PLAYER_PERKS.SIGNUP_BUTTON' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- payment box -->
+<section class="payment_background_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <span class="payment_title">{{'LANDING.PAYMENT.TITLE' | translate }}</span>
+
+        <div class="payment_container">
+          <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+              <div id="card1"></div>
+              <div id="card2"></div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <div class="row">
+                <div class="col-md-4">
+                  <p>{{'LANDING.PAYMENT.TEXT' | translate }}
+
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <a ui-sref="termsandconditions.index" class="btn  btn-danger ">{{'LANDING.PAYMENT.BUTTON'
+                    | translate }}
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- get me -->
+<section class="getme_container hidden-xs hidden-sm">
+  <div class="container">
+    <div class="image_container">
+      <div class="row">
+        <!-- <div class="col-md-6">
+             <div class="red_border_bar"></div>
+         </div>-->
+      </div>
+      <div class="row">
+        <div class="box-landing-1">
+          <span>{{'LANDING.GET_ME_STARTED.TITLE.TEXT1' | translate }}</span>
+          <span>{{'LANDING.GET_ME_STARTED.TITLE.TEXT2' | translate }}</span>
+        </div>
+        <div class="box-landing-2">
+          <span>{{'LANDING.GET_ME_STARTED.ACCOUNT.TEXT1' | translate }}<span class="bold">{{'LANDING.GET_ME_STARTED.ACCOUNT.TEXT2' | translate }}</span></span>
+          <a ui-sref="register" class="btn  btn-danger">{{'LANDING.GET_ME_STARTED.ACCOUNT.BUTTON' |
+            translate }}</a>
+        </div>
+        <div class="box-landing-3">
+          <span><span class="bold">{{'LANDING.GET_ME_STARTED.CLIENT.TEXT1' | translate }}</span>{{'LANDING.GET_ME_STARTED.CLIENT.TEXT2' | translate }}</span>
+        </div>
+        <div class="box-landing-4">
+                      <span>{{'LANDING.GET_ME_STARTED.STEAM.TEXT1' | translate }}<span
+                        class="bold">{{'LANDING.GET_ME_STARTED.STEAM.TEXT2' | translate }}</span>{{'LANDING.GET_ME_STARTED.STEAM.TEXT3' | translate }}<span
+                        class="bold">{{'LANDING.GET_ME_STARTED.STEAM.TEXT4' | translate }}</span></span>
+        </div>
+        <div class="box-landing-5">
+          <div class="steam-box">
+            <div class="steam-icon"></div>
+            <span>{{'LANDING.GET_ME_STARTED.PLAY.INSIDE_BOX.TEXT1' | translate }}</span>
+            <span>{{'LANDING.GET_ME_STARTED.PLAY.INSIDE_BOX.TEXT2' | translate }}</span>
+          </div>
+                      <span class="text-box"><span
+                        class="bold">{{'LANDING.GET_ME_STARTED.PLAY.OUTSIDE_BOX.TEXT1' | translate }}</span>{{'LANDING.GET_ME_STARTED.PLAY.OUTSIDE_BOX.TEXT2' | translate }}<span
+                        class="bold">{{'LANDING.GET_ME_STARTED.PLAY.OUTSIDE_BOX.TEXT3' | translate }}</span> {{'LANDING.GET_ME_STARTED.PLAY.OUTSIDE_BOX.TEXT4' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="signup_red_container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-6 col-xs-12 ">
+        <form class="form-inline" name="emailform" ng-submit="open_modal()" novalidate>
+          <input class=" col-sm-8 col-xs-12" type="email" name="uEmail"
+                 ng-model="emailform.registration_email"
+                 placeholder="{{'LANDING.EMAIL_SIGNUP.PLACEHOLDER' | translate }}" required>
+
+          <div class="error_message_container">
+                        <span class="error animate-show" ng-show=" emailform.$error.required && emailform.$submitted">
+                          <i class="fa fa-exclamation-circle"></i>{{'LANDING.EMAIL_SIGNUP.ERROR_REQUIRED' | translate }}</span>
+                         <span class="error animate-show" ng-show="emailform.$error.email && emailform.$submitted">
+                         <i
+                           class="fa fa-exclamation-circle"></i>{{'LANDING.EMAIL_SIGNUP.ERROR_INVALID' | translate }}</span>
+          </div>
+          <div class="bar hidden-sm hidden-xs"></div>
+          <button type="submit"
+                  class="btn btn-block btn-default col-sm-4 col-xs-12">
+            {{'LANDING.EMAIL_SIGNUP.BUTTON' | translate }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

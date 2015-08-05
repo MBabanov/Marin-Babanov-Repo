@@ -1,0 +1,8 @@
+<div class="match match-{{round}}" ng-click="show_match_detail(match)" ng-class="{'finished':match.status=='FINISHED'}">
+    <div tournament-bracket-team match="match" round="round" position="1" current="current" team="team_1"
+         weight="weight"></div>
+
+    <div tournament-bracket-team match="match" round="round" position="2" current="current" team="team_2"
+         weight="weight"></div>
+    <div class="connector" id="match_{{match.weight}}"></div>
+</div>

@@ -1,0 +1,28 @@
+<div class="tournament-shot-box">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-2">
+            <div class="shot-title">
+                <img src="images/logos/shotter_logo.png" class="img-responsive"/>
+
+                <h3 translate="LOBBY.TITLES.WEEKLY_WINNERS"></h3>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div class="shot-info">
+                <div ng-repeat="winner in winners" class="winner">
+                        <span ng-repeat="p in winner.players">
+                            <a ui-sref="user.profile({id: p.player.user.username})">
+                                <span> {{p.player.user.username}}</span>
+                            </a>
+
+                            won <span>{{p.prize|number:2}} <i class=""
+                                                              ng-class="{'fel fel-fel_money_electornic':winner.type=='FAKE_CASH','fel fel-fel_money_euro':winner.type=='REAL_CASH'}"></i> ,</span>
+                        </span>
+                    at tournament
+                    <a>#{{winner.name}}</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

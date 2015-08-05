@@ -1,0 +1,30 @@
+<div class="player-hardware-box">
+    <div class="box-header">
+        <i class="fa fa-line-chart"></i>
+
+        <h3>HARDWARE</h3>
+        <button class="btn btn-danger" ng-disabled="!sync" ng-if="its_current_user"
+                ng-click="get_hardware()" style="margin-top: -10px">
+            Detect Computer Hardware
+        </button>
+
+    </div>
+    <div class="box-content">
+        <ul ng-if="have_hardware">
+            <li>
+                {{user.hardware.so}}
+            </li>
+            <li>
+                {{user.hardware.cpu}}
+            </li>
+            <li>
+                {{user.hardware.gpu}}
+            </li>
+            <li>
+                {{user.hardware.mem | mem}} GB RAM
+            </li>
+        </ul>
+        <img src="images/avatar/noHardware.jpg" class="img-responsives" ng-if="!have_hardware"/>
+
+    </div>
+</div>

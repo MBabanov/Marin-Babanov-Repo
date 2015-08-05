@@ -1,0 +1,55 @@
+<div class="edit-profile-box" ng-controller="cashier.user.history as _cashier">
+    <div class="box-header">
+        <h3>{{'CASHIER.HISTORY.TITLE' | translate}}</h3>
+        <a class="pull-right" ng-click="close()">
+            <i class="fa fa-times-circle"></i>
+        </a>
+    </div>
+    <div class="box-content">
+        <div class="wallet-box">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-striped table-wallet-history">
+                        <thead>
+                        <tr>
+                            <th style="width: 20%">{{'CASHIER.HISTORY.COL1' | translate}}</th>
+                            <th style="width: 35%">{{'CASHIER.HISTORY.COL2' | translate}}</th>
+                            <th style="width: 25%">{{'CASHIER.HISTORY.COL3' | translate}}</th>
+                            <th style="width: 15%">{{'CASHIER.HISTORY.COL4' | translate}}</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <div class="table-content-scrollable" scroll-bar>
+                        <table class="table table-striped table-wallet-history">
+
+                            <tbody>
+                            <tr ng-repeat="action in _cashier.actions|orderBy:'-date'">
+                                <td class="blacked" style="width: 21%">{{action.date | date:"dd/MM/yyyy"}}</td>
+                                <td style="width: 38%">{{action.action}}</td>
+                                <td class="blacked" style="width: 20%">{{action.amount}}
+                                    <i class=""
+                                       ng-class="{'fel fel-fel_money_electornic':action.cash_type=='FAKE_CASH','fel fel-fel_money_euro':action  .cash_type=='REAL_CASH'}"></i>
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--<div class="wallet-box-fotter">-->
+    <!--<div class="row">-->
+    <!--<div class="col-md-6">-->
+    <!--<div class="stars-detail">-->
+    <!--<i class="fa fa-star"></i>-->
+    <!--<span class="value">{{_cashier.cashier.frecuenly_player_points|number:2}}</span>-->
+    <!--<span class="detail">star points collected to date</span>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>

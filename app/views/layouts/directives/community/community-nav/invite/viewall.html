@@ -1,0 +1,20 @@
+<section class="tab-pane" ng-show="selected">
+    <div class="invite-content" scroll-bar>
+        <div class="span1 list-friends" data-ng-repeat="user in socialFriends ">
+            <a data-ng-if="!user.isSelected" data-ng-click="selectUser(user)">
+                <div data-ng-class="{true: 'item-selected'}[user.isSelected] " class="item-container">
+                    <img class="img-responsive" data-ng-src="{{user.avatar}}">
+                    <span class="item-name">{{user.username}}</span>
+                    <span class="item-location">{{user.provider}}</span>
+                </div>
+            </a>
+            <a data-ng-if="user.isSelected" data-ng-click="unselectUser(user)">
+                <div data-ng-class="{true: 'item-selected'}[user.isSelected] " class="item-container">
+                    <img class="img-responsive" data-ng-src="{{user.avatar}}">
+                    <span class="item-name">{{user.username}}</span>
+                    <span class="item-location">{{user.provider}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

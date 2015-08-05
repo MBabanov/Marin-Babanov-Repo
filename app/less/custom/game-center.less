@@ -1,0 +1,655 @@
+
+.slider {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  height: 495px;
+  max-height: 495px;
+  margin: auto;
+  img {
+    height: 495px;
+    width: 100%;
+    margin: auto;
+  }
+  video {
+    height: 495px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+//slider controls
+.slider-ctrl-box {
+  position: absolute;
+  top: -60px;
+  width: 360px;
+  height: 40px;
+  .es_title;
+  font-size: 13px;
+  line-height: 0.9;
+
+  .slick-timer-prev, .slick-timer-next {
+    background-color: @electronic-white;
+    color: @electronic-red;
+    text-align: center;
+    padding: 5px;
+    width: 100px;
+    height: 20px;
+    border: 0px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    span {
+      //text inside
+      color: @electronic-red;
+      text-align: center;
+      margin-left: -10px;
+      top: 18px;
+    }
+    :hover > span {
+      color: @electronic-white;
+    }
+  }
+
+  .slick-timer-prev:target, .slick-timer-next:target {
+    border: 0px;
+  }
+  .slick-timer-prev:hover, .slick-timer-next:hover {
+    cursor: pointer;
+  }
+
+  .slick-timer-next:hover, .slick-timer-prev:hover {
+    background-color: @electronic-red;
+    color: @electronic-white;
+  }
+
+  .timer-box {
+    margin: 0px 25px 0px 25px;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: @electronic-white;
+    color: @electronic-red;
+
+    text-align: center;
+    position: relative;
+    top: 5px;
+    span {
+      text-align: center;
+      color: @electronic-white;
+      text-transform: uppercase;
+      background-color: transparent;
+      position: absolute;
+      z-index: 2;
+      top: 14px;
+      font-size: 17px;
+      left: 23px;
+    }
+    .progress-bar {
+      background-color: @electronic-red;
+    }
+    .progress-bar-rect {
+      display: inline-block;
+      height: 40px;
+      left: -30px;
+      position: relative;
+    }
+  }
+  .progress-bar-success {
+    background-color: @electronic-white;
+  }
+}
+
+//slider container
+
+// box only header
+.box-only-header {
+  @media (min-width: @min-tablet) and (max-width: @max-tablet) {
+    > a > h3 {
+      font-size: 24px;
+    }
+  }
+
+  color: @electronic-white;
+  padding: 15px;
+  a {
+    > i {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    > h3 {
+      margin: 0 10px;
+      display: inline-block;
+    }
+  }
+}
+
+//box with header
+.box-with-header {
+  margin-top: 20px;
+  .box-header {
+    background-color: @electronic-grey;
+    color: @electronic-white;
+    .responsive-padding(15px);
+    > i {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 22px;
+    }
+
+    @media (min-width: @screen-md-min) {
+      > i {
+        font-size: 26px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        margin: 0 10px;
+        font-size: 24px;
+      }
+    }
+    @media (min-width: @screen-lg-min) {
+      > i {
+        font-size: 26px;
+        margin-right: 10px;
+      }
+
+      h3 {
+        margin: 0 10px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .box-content {
+    background: @electronic-white;
+    // height: 350px;
+    position: relative;
+  }
+
+}
+
+.game-boxes {
+  float: left;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  .box-header {
+    background-color: @electronic-grey;
+    color: @electronic-white;
+    padding: 15px;
+    > i {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+    > h3 {
+      margin: 0 10px;
+      display: inline-block;
+    }
+  }
+  .box-content {
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    width: 100%;
+    padding-top: 15px;
+    .game-container {
+      margin: 0 auto;
+      width: 65%;
+      border-right: 4px solid @electronic-red;
+      border-bottom: 2px solid @electronic-red;
+      border-top: 2px solid @electronic-red;
+
+      .game-header {
+        border-bottom: 2px solid @electronic-red;
+        width: 100%;
+        height: 40px;
+        background-color: @electronic-grey;
+        padding: 8px;
+        img {
+          width: 50%;
+          height: auto;
+        }
+      }
+
+      .box-cover {
+        background-image: url("../images/logos/logo_trans.png");
+        width: 100%;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: grey;
+        border-bottom: 3px solid @electronic-red;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+      }
+    }
+    .game-description {
+      font-family: @font-family-electronic-stars-title;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.3em;
+      padding-bottom: 10px;
+    }
+  }
+  .box-footer {
+    .rating {
+      width: 50%;
+      background: @electronic-grey;
+      padding: 5px;
+      text-align: center;
+      color: @electronic-white;
+      float: left;
+    }
+    .play {
+      background: @electronic-red;
+      width: 50%;
+      text-align: center;
+      color: @electronic-white;
+      float: left;
+    }
+
+  }
+  &.bigger {
+    width: 50%;
+
+  }
+  &.smaller {
+    width: 25%;
+    .box-content {
+      border: 0px;
+      background: @electronic-white;
+      .game-description {
+        font-size: 1 wm;
+      }
+      .game-header {
+        height: 25px;
+        padding: 0px 5px;
+      }
+
+    }
+    .box-footer {
+      font-size: 0.9em !important;
+      .btn-sm {
+        padding: 4px 10px;
+
+      }
+    }
+  }
+}
+
+//game center last played
+
+//top up
+.top-up-now {
+  margin-top: 20px;
+  background-color: @electronic-red;
+  a, a:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+}
+
+.vote-to-win {
+  padding: 20px;
+  padding-bottom: 29px;
+  h4 {
+    color: @electronic-black;
+    margin-bottom: 0px;
+  }
+  p {
+    color: @electronic-red;
+  }
+  .game {
+    a {
+      display: block;
+      text-decoration: none;
+      background-color: @electronic-grey;
+      padding: 2px;
+      color: @electronic-white;
+      font-family: @font-family-electronic-stars-title;
+      div {
+        padding: 5px;
+      }
+      &:hover {
+        background-color: @electronic-red;
+      }
+    }
+
+    .game-description {
+      font-family: @font-family-electronic-stars-title;
+      padding-top: 5px;
+      font-size: @title;
+      text-align: center;
+    }
+  }
+}
+
+//vote now  red box
+
+// vote
+.vote-box {
+  margin-right: 15px;
+  position: relative;
+  .vote-to-win {
+    margin-left: 15px;
+    .title {
+      margin-top: 10px;
+      font-size: @title;
+      margin-bottom: 0px;
+    }
+    .description {
+      color: @electronic-red;
+    }
+  }
+  .col-md-3:nth-child(2) {
+    right: 0;
+  }
+  .col-md-3 {
+    padding-right: 40px;
+    position: absolute;
+    .description {
+      text-overflow: ellipsis;
+    }
+    .title {
+      text-align: left;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      position: absolute;
+      margin-right: 50px;
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      img {
+        width: 110px;
+        height: 140px;
+        border: 4px solid black;
+      }
+      div {
+        background-color: #4D4D4D;
+        width: 110px;
+        height: 30px;
+        text-align: center;
+        span {
+          display: inline-block;
+          padding-top: 5px;
+          color: @electronic-white;
+        }
+      }
+    }
+    a:hover {
+      text-decoration: none;
+      div {
+        background-color: @electronic-red;
+      }
+      img {
+        border-color: @electronic-red;
+      }
+    }
+  }
+}
+
+//box red
+.box-red {
+  background-color: @electronic-red;
+  color: @electronic-white;
+}
+
+// games center box
+.games-center-box {
+  margin-top: -68px;
+  .nav {
+    font-family: @font-family-electronic-stars-title;
+    border: none;
+    > li:after {
+      /*arrow added to cown*/
+      content: '';
+      display: block;
+      position: absolute;
+      top: 46px; /*should be set to -border-width x 2 */
+      left: 25px;
+      width: 0;
+      height: 0;
+      border-color: @electronic-grey transparent transparent transparent; /*border color should be same as div div background color*/
+      border-style: solid;
+      border-width: 10px;
+    }
+    > li.active:after {
+      border-color: transparent transparent transparent transparent; /*border color should be same as div div background color*/
+    }
+  }
+
+  //game tab
+  .game-tab {
+    color: @electronic-white !important;
+    background: @electronic-grey !important;
+    padding: 14px 14px;
+    text-transform: uppercase;
+    border: 0px !important;
+    margin-right: 15px;
+    padding-right: 50px;
+    margin-bottom: 1px;
+  }
+  .active > .game-tab {
+    color: @electronic-white !important;
+    background: @electronic-red !important;
+  }
+  .game-box-divider {
+    background: @electronic-red;
+    height: 20px;
+  }
+  .game-box-content {
+    padding: 20px;
+    background: @electronic-white;
+    // height: 100px;
+  }
+}
+
+//games box
+.games-box {
+  //  padding: 15px;
+  margin-top: 20px;
+  background: @electronic-grey;
+  .box-header {
+    padding: 15px;
+    h3 {
+      color: @electronic-white;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #4D4D4D;
+    }
+    .filter-label {
+      color: @electronic-white;
+      margin-top: 5px;
+    }
+    i {
+      font-size: 10px;
+    }
+  }
+}
+
+//game-center page
+.text-red {
+  color: @electronic-red;
+}
+
+.text-white {
+  color: @electronic-white;
+}
+
+//all games
+.cover-container {
+  display: inline-block;
+  min-height: 110px; // 60img + 20title + 10 margin
+  position: absolute;
+  margin-top: 10px;
+  > a {
+    text-decoration: none;
+    color: white;
+    img {
+      width: 60px;
+      height: 80px;
+      border-right: 3px solid @electronic-red;
+      border-bottom: 2px solid @electronic-red;
+      border-radius: 3px;
+    }
+    .box-cover {
+      background-image: url("../images/logos/logo_trans.png");
+      width: 60px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: @electronic-grey;
+      border-right: 3px solid @electronic-red;
+      border-bottom: 2px solid @electronic-red;
+      border-top: 2px solid @electronic-red;
+    }
+  }
+  .cover-stars {
+    background-color: @electronic-grey;
+    opacity: 0.8;
+    z-index: 2;
+    position: absolute;
+    bottom: 12px;
+    right: 2px;
+
+    span {
+      font-size: 5px;
+      display: inline;
+    }
+    i {
+      color: @electronic-white;
+    }
+  }
+  .cover-stars:hover {
+    cursor: pointer;
+  }
+}
+
+// all games game
+.game-name {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  span {
+    margin-top: 5px;
+    display: inline-block;
+    color: @electronic-red;
+    font-size: 12px;
+  }
+}
+
+// next tournament col
+.next-tournament {
+  display: block;
+  padding-left: -15px;
+  margin: 50px 6px 0px 0px;
+  min-width: 150px;
+  .next-date {
+    color: @electronic-red;
+    margin-right: 20px;
+  }
+  .next-time {
+    padding-left: 5px;
+    color: @electronic-white;
+  }
+}
+
+// friend playning col
+.frieds-plaing-container {
+  min-width: 140px;
+  div > span {
+    color: @electronic-red;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .row-of-circle {
+    align-content: center;
+    text-align: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .circle-image {
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline;
+    > img {
+      width: 40px;
+      height: 40px;
+      border-radius: 150px;
+      -webkit-border-radius: 150px;
+      -moz-border-radius: 150px;
+    }
+  }
+  .view-all {
+    float: right;
+    margin-top: 20px;
+    text-align: right;
+    padding-left: 70px;
+    > button {
+      background-color: @electronic-grey;
+      color: @electronic-white;
+    }
+    > div > a {
+      text-decoration: none;
+      color: @electronic-white;
+    }
+    .dropdown-menu {
+      background-color: @electronic-grey;
+      li {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// dropdwon menu.
+.dropdown-menu-filter {
+  > li {
+    display: block;
+    color: @electronic-white;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    input {
+      float: right;
+    }
+  }
+  > li:hover {
+    color: @electronic-black;
+  }
+}
+
+// table all games
+.table-content-scrollable {
+  overflow: auto;
+  height: 400px;
+}
+
+//Utils
+.red-triangle {
+  border-bottom: 40px solid #FFF;
+  border-left: 40px solid transparent;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  left: -30px;
+}

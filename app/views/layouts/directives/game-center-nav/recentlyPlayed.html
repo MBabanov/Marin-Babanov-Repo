@@ -1,0 +1,96 @@
+<section class="tab-pane" ng-show="selected" id="recentlyplayed">
+    <div class="row">
+        <div class="game-boxes" ng-class="{'bigger':$first,'smaller':!$first}" ng-repeat="game in games">
+            <div class="box-header">
+                <i class="fa fa-gamepad"></i>
+
+                <h3>{{title}}</h3>
+            </div>
+            <div class="box-content">
+                <div class="game-container">
+                    <div class="game-header">
+                        <img src="/images/logos/logo_trans.png">
+                    </div>
+
+                    <img src="images/test/counter_strike.jpg">
+                </div>
+                <div class="game-description">
+                    Counter Strike GO
+                </div>
+
+            </div>
+            <div class="box-footer">
+                <div class="rating">
+                    <rating ng-model="rate" state-on="'fa fa-star'" state-off="'fa fa-star-o'" max="5"
+                            readonly="true"></rating>
+                </div>
+                <div class="play">
+                    <button class="btn btn-danger btn-sm btn-block">
+                        PLAY
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--<div class="game-boxes smaller">-->
+        <!--<div class="box-content">-->
+        <!--<div class="game-container">-->
+        <!--<div class="game-header">-->
+        <!--<img src="/images/logos/logo_trans.png">-->
+        <!--</div>-->
+
+        <!--<img src="images/test/counter_strike.jpg">-->
+        <!--</div>-->
+        <!--<div class="game-description">-->
+        <!--Counter Strike GO-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="box-footer">-->
+        <!--<div class="rating">-->
+        <!--<rating ng-model="rate" state-on="'fa fa-star'" state-off="'fa fa-star-o'" max="5"-->
+        <!--readonly="true"></rating>-->
+        <!--</div>-->
+        <!--<div class="play">-->
+        <!--<button class="btn btn-danger btn-sm btn-block">-->
+        <!--PLAY-->
+        <!--<i class="fa fa-chevron-right"></i>-->
+        <!--</button>-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="game-boxes smaller">-->
+        <!--<div class="box-content">-->
+        <!--<div class="game-container">-->
+        <!--<div class="game-header">-->
+        <!--<img src="/images/logos/logo_trans.png">-->
+        <!--</div>-->
+
+        <!--<img src="images/test/counter_strike.jpg">-->
+        <!--</div>-->
+        <!--<div class="game-description">-->
+        <!--Counter Strike GO-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="box-footer">-->
+        <!--<div class="rating">-->
+        <!--<rating ng-model="rate" state-on="'fa fa-star'" state-off="'fa fa-star-o'" max="5"-->
+        <!--readonly="true"></rating>-->
+        <!--</div>-->
+        <!--<div class="play">-->
+        <!--<button class="btn btn-danger btn-sm btn-block">-->
+        <!--PLAY-->
+        <!--<i class="fa fa-chevron-right"></i>-->
+        <!--</button>-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+    </div>
+
+
+</section>

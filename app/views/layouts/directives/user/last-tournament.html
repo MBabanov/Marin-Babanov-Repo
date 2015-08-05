@@ -1,0 +1,80 @@
+<div class="game-box-last-game">
+    <div class="game-box-last-game-container">
+        <div class="row">
+            <div class="col-md-2 pull-right" ng-if="have_data">
+                <div class="stats">
+                    <div class="line">
+                        <div class=" esi-30 esi-total-kill"></div>
+
+                        <div>
+                            <span class="title">Kills</span>
+                            <span class="value">{{stats.kills}}</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-total-hs"></div>
+
+                        <div>
+                            <span class="title">headshots</span>
+                            <span class="value">{{stats.headshots}}</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-total-deaths"></div>
+
+                        <div>
+                            <span class="title">deads</span>
+                            <span class="value">{{stats.deaths}}</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-average-kill-rate-respawn"></div>
+
+                        <div>
+                            <span class="title">HS Ratio</span>
+                            <span class="value">{{stats.headshots_ratio | number:2}}%</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-accuracy-attack"></div>
+
+                        <div>
+                            <span class="title">Accuracy</span>
+                            <span class="value">{{stats.acuracy|number:2}}%</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-shot-fired"></div>
+
+                        <div>
+                            <span class="title">Shots Fired</span>
+                            <span class="value">{{stats.shots_fired}}</span>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class=" esi-30 esi-shot-hits"></div>
+
+                        <div>
+                            <span class="title">Shots hits</span>
+                            <span class="value">{{stats.shots_hit}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pull-right" ng-if="!have_data">
+                <div class="no-stats">
+                    <p>Low on stats? <br> Play now to increase your stats!</p>
+                    <a class="btn btn-danger">Play Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="game-box-last-game-footer">
+                    <h3 class="title">LATEST GAME STATS</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

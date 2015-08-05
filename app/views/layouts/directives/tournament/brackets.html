@@ -1,0 +1,222 @@
+<div class="brackets">
+
+<ul class="bracket-round" ng-repeat="r in rounds ">
+<div class="round-identifier">
+    <div class="text">
+        Round {{$index +1}}
+    </div>
+</div>
+<li ng-repeat="m in r">
+<div ng-if="m.teams.length == 2">
+    <div class="bracket-team" ng-if="m.teams[0].players.length ==0">
+        <span class="arrow-alt"></span>
+
+        <div class="bracket-team-content">
+            <img class="circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[0].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                USER PENDING
+            </div>
+        </div>
+    </div>
+
+    <div class="bracket-team registered" ng-if="m.teams[0].players.length ==1"
+         ng-class="{'winner':m.winner==m.teams[0].id,'loss':m.winner!=m.teams[0].id && m.winner!=''}"
+         ng-init="p=m.teams[0].players[0]">
+        <span class="arrow-alt"></span>
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 ng-src="{{p.user.avatar}}">
+            <h4>TEAM {{m.teams[0].name}}</h4>
+            <h5>{{p.user.username}}</h5>
+        </div>
+        <div class="bracket-team-footer"
+             ng-class="{'winner':m.winner==m.teams[0].id,'loss':m.winner!=m.teams[0].id && m.winner!=''}">
+            <div class="status">
+                LVL {{p.user.lvl}}
+            </div>
+            <div class="members">
+                <span ng-if="m.winner==m.teams[0].id">WINNER</span>
+                <span ng-if="m.winner!=m.teams[0].id &&m.winner!=''">ELIMINATED</span>
+                <span ng-if="m.winner==''">WAITING</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bracket-separator">
+        <br>
+
+        <div class="circle"></div>
+    </div>
+
+
+    <div class="bracket-team" ng-if="m.teams[1].players.length ==0">
+        <span class="arrow"></span>
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[1].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                USER PENDING
+            </div>
+        </div>
+    </div>
+
+    <div class="bracket-team registered"
+         ng-class="{'winner':m.winner==m.teams[1].id,'loss':m.winner!=m.teams[1].id && m.winner!=''}"
+         ng-if="m.teams[1].players.length ==1"
+         ng-init="p=m.teams[1].players[0]">
+        <span class="arrow"></span>
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 ng-src="{{p.user.avatar}}">
+            <h4>TEAM {{m.teams[1].name}}</h4>
+            <h5>{{p.user.username}}</h5>
+        </div>
+        <div class="bracket-team-footer"
+             ng-class="{'winner':m.winner==m.teams[1].id,'loss':m.winner!=m.teams[1].id && m.winner!=''}">
+            <div class="status">
+                LVL {{p.user.lvl}}
+            </div>
+            <div class="members">
+                <span ng-if="m.winner==m.teams[1].id">WINNER</span>
+                <span ng-if="m.winner!=m.teams[1].id && m.winner!=''">ELIMINATED</span>
+                <span ng-if="m.winner==''">WAITING</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="m.teams.length == 0">
+    <div class="bracket-team">
+        <span class="arrow-alt"></span>
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[0].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                WAITING
+            </div>
+        </div>
+
+    </div>
+    <div class="bracket-separator">
+        <br>
+
+        <div class="circle"></div>
+    </div>
+    <div class="bracket-team">
+        <span class="arrow"></span>
+        <!--<span class="arrow-alt"></span>-->
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[1].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                WAITING
+            </div>
+        </div>
+
+    </div>
+</div>
+<div ng-if="m.teams.length == 1">
+    <div class="bracket-team" ng-if="m.teams[0].players.length ==0">
+        <span class="arrow-alt"></span>
+
+        <div class="bracket-team-content">
+            <img class="circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[0].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                USER PENDING
+            </div>
+        </div>
+    </div>
+    <div class="bracket-team registered" ng-if="m.teams[0].players.length ==1"
+         ng-class="{'winner':m.winner==m.teams[0].id,'loss':m.winner!=m.teams[0].id && m.winner!=''}"
+         ng-init="p=m.teams[0].players[0]">
+        <span class="arrow-alt"></span>
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 ng-src="{{p.user.avatar}}">
+            <h4>TEAM {{m.teams[0].name}}</h4>
+            <h5>{{p.user.username}}</h5>
+        </div>
+        <div class="bracket-team-footer"
+             ng-class="{'winner':m.winner==m.teams[0].id,'loss':m.winner!=m.teams[0].id && m.winner!=''}">
+            <div class="status">
+                LVL {{p.user.lvl}}
+            </div>
+            <div class="members">
+                <span ng-if="m.winner==m.teams[0].id">WINNER</span>
+                <span ng-if="m.winner!=m.teams[0].id &&m.winner!=''">ELIMINATED</span>
+                <span ng-if="m.winner!=''">WAITING</span>
+            </div>
+        </div>
+    </div>
+    <div class="bracket-separator">
+        <br>
+
+        <div class="circle"></div>
+    </div>
+    <div class="bracket-team">
+        <span class="arrow"></span>
+        <!--<span class="arrow-alt"></span>-->
+
+        <div class="bracket-team-content">
+            <img class=" circle"
+                 src="/images/bgs/teams.png" alt="user">
+            <h4>TEAM {{m.teams[1].name}}</h4>
+            <h5>MATCH PENDING</h5>
+        </div>
+        <div class="bracket-team-footer">
+            <div class="status">
+                PENDING
+            </div>
+            <div class="members">
+                WAITING
+            </div>
+        </div>
+
+    </div>
+</div>
+</li>
+</ul>
+</div>
+

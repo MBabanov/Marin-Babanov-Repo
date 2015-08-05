@@ -1,0 +1,12 @@
+<div>
+    <ul class="g-ranking">
+        <li ng-repeat="p in users">
+            <div>
+                <h3>{{$index +1 |cardinal}}</h3>
+                <img ng-src="{{p.avatar}}"
+                     class="img-circle connected-status"/>
+                <span>{{p.username}} </span>
+            </div>
+        </li>
+    </ul>
+</div>

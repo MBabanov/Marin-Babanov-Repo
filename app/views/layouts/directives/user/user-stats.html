@@ -1,0 +1,281 @@
+<div class="player-stats-box">
+<div class="box-header">
+    <i class="fa fa-line-chart"></i>
+
+    <h3>PLAYER STATS</h3>
+</div>
+<div class="box-content">
+<slick ng-if="have_data">
+<div>
+    <div class="player-stats-box-content-image">
+        <div class="player-stats-box-container">
+            <div class="row">
+                <div class="col-md-2 pull-right">
+                    <div class="stats">
+                        <div class="line">
+                            <!--<i class="fa fa-bar-chart"></i>-->
+                            <div class=" esi-30 esi-user-lvl"></div>
+                            <div>
+                                <span class="title">USER LVL</span>
+                                <span class="value">{{stats.lvl}} </span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-total-matches"></div>
+
+                            <div>
+                                <span class="title">TOTAL MATCHES PLAYED</span>
+                                <span class="value">{{stats.match_played}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-total-matches-won"></div>
+
+                            <div>
+                                <span class="title">TOTAL MATCHES WON</span>
+                                <span class="value">{{stats.matches_win}}/{{stats.match_played}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-total-matches-lost"></div>
+
+                            <div>
+                                <span class="title">TOTAL MATCHES LOST</span>
+                                <span class="value">{{stats.matches_lost}}/{{stats.match_played}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-total-tournaments-played"></div>
+
+                            <div>
+                                <span class="title">TOURNAMENTS PLAYED</span>
+                                <span class="value">{{stats.tournaments_played}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-total-tournaments-played"></div>
+
+                            <div>
+                                <span class="title">TOTAL HOURS PLAYED</span>
+                                <span class="value">{{stats.time_played|hours}} HOURS</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="esi-30 esi-best-map"></div>
+
+                            <div>
+                                <span class="title">MOST PLAYED MAP</span>
+                                <span class="value">DE_AZTEC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="player-stats-box-content-no-image">
+        <div class="player-stats-box-container player-margin">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stats">
+                        <div class="line">
+                            <div class=" esi-30 esi-total-kill"></div>
+
+                            <div>
+                                <span class="title">TOTAL KILLS</span>
+                                <span class="value">{{stats.kills}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-kill-hs"></div>
+
+                            <div>
+                                <span class="title">TOTAL KILLS HEADSHOTS</span>
+                                <span class="value">{{stats.kills_headshot}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-hs"></div>
+
+                            <div>
+                                <span class="title">TOTAL HEADSHOTS</span>
+                                <span class="value">{{stats.headshots}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-kill-grenade"></div>
+
+                            <div>
+                                <span class="title">TOTAL KILL WITH GRENADES</span>
+                                <span class="value">{{stats.kills_grenade }}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-deaths"></div>
+                            <div>
+                                <span class="title">TOTAL DEATHS</span>
+                                <span class="value">{{stats.deaths}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-bombs_defused"></div>
+
+                            <div>
+                                <span class="title">TOTAL DEFUSED BOMBS</span>
+                                <span class="value">{{stats.defused_bombs}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-bombs"></div>
+
+                            <div>
+                                <span class="title">TOTAL PLANTED BOMBS</span>
+                                <span class="value">{{stats.planted_bombs}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats">
+                        <div class="line">
+                            <div class=" esi-30 esi-shot-fired"></div>
+                            <div>
+                                <span class="title">SHOTS FIRED</span>
+                                <span class="value">{{stats.shots_fired}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-shot-hits"></div>
+
+                            <div>
+                                <span class="title">SHOTS HITS</span>
+                                <span class="value">{{stats.shots_hit}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-accuracy-attack"></div>
+
+                            <div>
+                                <span class="title">ACCURACY</span>
+                                <span class="value">{{stats.acuracy | number:2}}%</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-kill-ratio"></div>
+
+                            <div>
+                                <span class="title">KILL RATIO</span>
+                                <span class="value">{{stats.kill_ratio | number:2}}%</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-average-kill-rate-respawn"></div>
+
+                            <div>
+                                <span class="title">HEADSHOT RATIO</span>
+                                <span class="value">{{stats.headshots_ratio|number:2}}%</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-average-kill-rate-respawn"></div>
+
+                            <div>
+                                <span class="title">KILLS / MIN</span>
+                                <span class="value">{{stats.kill_ratio_min|number:2}}</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class=" esi-30 esi-total-hs"></div>
+
+                            <div>
+                                <span class="title">HEADSHOT / MIN</span>
+                                <span class="value">{{stats.headshots_ratio_min|number:2}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div>
+    <div class="player-stats-box-content-no-image">
+        <div class="player-stats-box-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <nvd3 options="options" data="data"></nvd3>
+                </div>
+                <div class="col-md-2">
+
+                    <ul class="nav nav-stats">
+                        <li>
+                            <a ng-click="data_graph('kills')" ng-class="{'active':type_graph=='kills'}">
+                                <div class=" esi-30 esi-total-kill"></div>
+                                <div class="stats-name"> average kill</div>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="data_graph('headshots')" ng-class="{'active':type_graph=='headshots'}">
+
+                                <div class=" esi-30 esi-total-hs"></div>
+                                <div class="stats-name"> average headshots</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="data_graph('deaths')" ng-class="{'active':type_graph=='deaths'}">
+
+                                <div class=" esi-30 esi-total-deaths"></div>
+                                <div class="stats-name"> TOTAL DEATHS</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="data_graph('time')" ng-class="{'active':type_graph=='time'}">
+
+                                <div class=" esi-30 esi-total-tournaments-played"></div>
+                                <div class="stats-name"> average time played</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a ng-click="data_graph('acuracy')" ng-class="{'active':type_graph=='acuracy'}">
+                                <div class=" esi-30 esi-accuracy-attack"></div>
+                                <div class="stats-name">ACCURACY ATTACK</div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</slick>
+<div ng-if="!have_data">
+    <div class="player-stats-box-content-image">
+        <div class="player-stats-box-container">
+            <div class="row">
+                <div class="col-md-3 pull-right">
+                    <div class="no-stats">
+                        <p>Low on stats? <br> Play now to increase your stats!</p>
+                        <a class="btn btn-danger">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="player-stats-box-footer-container">
+            <h3 class="title">TOTAL</h3>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>

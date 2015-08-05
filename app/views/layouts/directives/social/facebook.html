@@ -1,0 +1,57 @@
+<section class="box-with-header">
+    <div class="box-header">
+        <i class="fa fa-facebook-square"></i>
+        <h3>FACEBOOK</h3>
+    </div>
+    <div class="box-content facebook" scroll-bar>
+        <div class="facebook_container">
+             <!--   <span ng-repeat="fbItem in facebook" on-repeat-done="ngRepeatFinished" data="facebook_done">-->
+            <span ng-repeat="fbItem in facebook" >
+                    <span>
+                        <img class="profile" ng-src="{{fbItem.picture}}">
+                        <span class="title">{{fbItem.from.name}}</span><br>
+                        <a class="link-text" rel="external" ng-href="{{fbItem.link}}">
+                            <span ng-show="fbItem.story != 'undefined'" class="text">{{fbItem.story}}</span>
+                            <span ng-show="fbItem.message != 'undefined'" class="text">{{fbItem.message}}</span>
+                            <!-- <span ng-if="fbItem.link != 'undefined'">
+                                 <img class=" thumbnail" ng-src="{{fbItem.link}}">
+                             </span>-->
+                        </a>
+                        <br>
+                        <span class="date">{{fbItem.created_time | date:'shortTime'}}</span>
+                        <br>
+                        <div class="row comment">
+                            <div class="col-md-3"><!-- fb like box -->
+                                <span ng-if="fbItem.likes == undefined">
+                                     <i class="fa fa-thumbs-o-up"></i>
+                                    <span>be the first to like this</span>
+                                </span>
+
+                                <span ng-if="fbItem.likes.data.length > 0">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span>{{fbItem.likes.data.length}} likes this</span>
+                                 </span>
+
+                                <!-- to do you commented
+                                <div ng-if="fbItem.likes.data.length > 0">
+                                    <i class="fa fa-thumbs-o-up"></i>
+                                    <span>you and {{fbItem.likes.data.length - 1}}others likes this</span>
+                                </div>-->
+                            </div>
+                            <div class="col-md-3 ">
+                                <span ng-if=" fbItem.comments !== undefined">
+                                   <i class="fa fa-comment"></i>
+                                   <span>{{fbItem.comments.data.length}} comments</span>
+                                 </span>
+                                 <span ng-if="fbItem.comments == undefined">
+                                       <i class="fa fa-comment"></i>
+                                       <span>0 comments</span>
+                                 </span>
+                            </div>
+                        </div>
+                        <hr class="separator">
+                    </span>
+               </span>
+        </div>
+    </div>
+</section>
